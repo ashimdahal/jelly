@@ -1,7 +1,7 @@
 import requests
 
 API_URL = "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill"
-headers = {"Authorization": "Bearer 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"}
+headers = {"Authorization": "Bearer API_TOKEN_HERE"}
 
 def query(payload):
 	response = requests.post(API_URL, headers=headers, json=payload)
