@@ -1,0 +1,5 @@
+gensim==3.7.3
+spello==1.2.0
+snowballstemmer
+tensorflow
+sentencepiece

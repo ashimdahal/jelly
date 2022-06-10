@@ -1,0 +1,7 @@
+Nepali_nlp/Nepali_nlp/
+!Nepali_nlp/Nepali_nlp/__init__.py
+
+!Nepali_nlp/Nepali_nlp/unicode_nepali.py
+!Nepali_nlp/Nepali_nlp/local_dataset/
+!Nepali_nlp/Nepali_nlp/__pycache__
+!Nepali_nlp/Nepali_nlp/spellcheck.py
