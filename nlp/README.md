@@ -1,4 +1,5 @@
-<h1>This projects aims to build a library for all the NLP processes for Nepali Language.</h1>
+<h1>This is a small branch of NEPALI_NLP repo by Sushil Ghimire. His documentation on the module can be fould below. ALTHOUGH, we have only
+used the unicode and spell correction modules for this.</h1>
 
 <h2>Getting the module</h2>
 
