@@ -6,3 +6,4 @@ nlp/key.json
 !nlp/Nepali_nlp/local_dataset/
 !nlp/Nepali_nlp/__pycache__
 !nlp/Nepali_nlp/spellcheck.py
+bot/token.txt
