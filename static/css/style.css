@@ -27,8 +27,8 @@ body {
     position: absolute;
     width: 100%;
    
-   bottom: 2px;
-   width: 100%;
+   
+   bottom: 0px;
     
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 

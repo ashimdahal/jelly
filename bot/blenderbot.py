@@ -1,5 +1,5 @@
 import requests
-token = open('/home/ashim/Documents/python/projects/jelly/bot/token.txt').read()
+token = open('/home/parashbam16/anaconda3/envs/jellyproject/chatbot/jelly/bot/token.txt').read()
 API_URL = "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill"
 headers = {"Authorization": "Bearer {token}"}
 
