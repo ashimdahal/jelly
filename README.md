@@ -1,5 +1,5 @@
 # Jelly
-A chatbot that replies to romanized Nepali. Start by cloning and installing the required libraries.
+A chatbot that replies to romanized Nepali(not production/working ready yet). Start by cloning and installing the required libraries.
 
     git clone https://github.com/ashimdahal/jelly.git
 	pip install -r requirements.txt     
