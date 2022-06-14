@@ -39,6 +39,15 @@ def get_input(text,previous_conversation=None,last_n=5):
         }
     }
     return i
+    
+def talk(text,prev_user_input,generated_response):
+    previous_convo ={
+        'past_user_inputs':prev_user_input,
+        'generated_responses':generated_response
+        }
+    inp = get_input(text,previous_conversation=previous_convo)
+    out = query(inp)
+    return out
 
 def main():
 
