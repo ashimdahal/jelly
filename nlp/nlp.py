@@ -20,5 +20,5 @@ def translate(text, source,target,project_id="jelly-352913"):
 
     for translation in response.translations:
         print("Translated text: {}".format(translation.translated_text))
-source = 'en-US'
-target = 'ne'
+# source = 'en-US'
+# target = 'ne'
