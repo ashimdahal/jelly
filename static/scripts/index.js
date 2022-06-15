@@ -1,22 +1,3 @@
-// Collapsible
-var coll = document.getElementsByClassName("collapsible");
-
-for (let i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        
-
-        var content = this.nextElementSibling;
-
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-        } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-        }
-
-    });
-}
-
 function getTime() {
     let today = new Date();
     hours = today.getHours();
@@ -36,8 +17,8 @@ function getTime() {
 
 // Gets the first message
 function firstBotMessage() {
-    let firstMessage = "कस्तो चल्दैछ ?"
-    document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
+    let firstMessage = "नमस्ते मेरो नाम जेली हो kylie मायालु "
+    document.getElementById("botStarterMessage").innerHTML = `<p class="botText"><img src="../static/img/robot.png"><span> ${firstMessage}</span></p>`;
 
     let time = getTime();
 
@@ -50,10 +31,13 @@ firstBotMessage();
 // Retrieves the response
 function getHardResponse(userText) {
     let botResponse = getBotResponse(userText);
-    let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>';
+    let botHtml = `<p class="botText"><img src="../static/img/robot.png"><span> ${botResponse}</span></p>`;
     $("#chatbox").append(botHtml);
+
+    var chatbox = document.getElementById('chatbox')
+    chatbox.scrollTop= chatbox.scrollHeight
     
-    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+    
 }
 
 //Gets the text  from the input box and processes it
@@ -68,8 +52,10 @@ function getResponse() {
 
     $("#textInput").val("");
     $("#chatbox").append(userHtml);
-    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+    var chatbox = document.getElementById('chatbox')
+    chatbox.scrollTop= chatbox.scrollHeight
     
+
     setTimeout(() => {
         getHardResponse(userText);
     }, 500)
@@ -83,9 +69,9 @@ function buttonSendText(sampleText) {
 
     $("#textInput").val("");
     $("#chatbox").append(userHtml);
-    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+   
 
-    
+
 }
 
 function sendButton() {
@@ -95,14 +81,79 @@ function sendButton() {
 function heartButton() {
     buttonSendText("This is my heart for you")
     userText= "This is my heart for you"
+    var chatbox = document.getElementById('chatbox')
+    chatbox.scrollTop= chatbox.scrollHeight
     setTimeout(() => {
         getHardResponse(userText);
     }, 1000)
 }
 
-// Press enter to send a message
-$("#textInput").keypress(function (e) {
-    if (e.which == 13) {
-        getResponse();
+
+
+var collapser = document.getElementById('collapser');
+collapser.addEventListener('click', () => {
+    var visiblee = document.getElementById('chatbot')
+    var visible = document.getElementById('conversation')
+
+    if (visible.style.display != 'none') {
+        visible.style.display = 'none'
+        visiblee.style.display = 'block'
+    } else {
+        visible.style.display = 'block'
+        visiblee.style.display = 'grid'
     }
-});
+})
+
+//Handles the dropdown of the customize-chat-look
+var dropdown1 = document.getElementById('dropdown1');
+dropdown1.addEventListener('click', () => {
+    var dropdown_content1 = document.getElementById('dropdown_content1')
+
+    if (dropdown_content1.style.display != 'none') {
+        dropdown_content1.style.display = 'none'
+    } else {
+        dropdown_content1.style.display = 'block'
+    }
+})
+
+
+//Handles the dropdown of the customise conversation
+
+
+var dropdown2 = document.getElementById('dropdown2');
+dropdown2.addEventListener('click', () => {
+    var dropdown_content2 = document.getElementById('dropdown_content2')
+
+    if (dropdown_content2.style.display != 'none') {
+        dropdown_content2.style.display = 'none'
+    } else {
+        dropdown_content2.style.display = 'block'
+
+    }
+})
+
+//Function for the darkmode mode huhu kati dherai feature halnw baaki chaaaaaaa
+var darkmode =document.getElementById('darkmode')
+
+var dark =document.getElementById('dark')
+var DBM = document.getElementById('DBM')
+
+
+dark.addEventListener('click',()=>{
+    if (darkmode.style.color!='white'){
+        darkmode.style.color= 'white'
+        dark.style.backgroundColor='rgba(22, 21, 21, 0.705)'
+        DBM.innerHTML= `Dark mode`
+        darkmode.style.transform='translateX(-1.2rem) translateY(-0.35rem)'
+        dark.style.border= 'none'
+        
+    }
+    else{
+        darkmode.style.color='black'
+        darkmode.style.transform='translateX(.9rem) translateY(-0.5rem)'
+        dark.style.backgroundColor='white'
+        dark.style.border= '2px solid rgba(22, 21, 21, 0.705)'
+        DBM.innerHTML= `Bright mode`
+       
+    }
+})
