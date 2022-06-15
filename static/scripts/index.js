@@ -117,3 +117,30 @@ dark.addEventListener('click',()=>{
         
     }
 })
+
+//Function for the close button
+
+//...............
+var robot1 = document.getElementById('robot1')
+var background = document.getElementById('background')
+var chatbot = document.getElementById('chatbot')
+var close = document.getElementById('close')
+var visible = document.getElementById('conversation')
+close.addEventListener('click', () => {
+    chatbot.style.animation = 'collapse 1.5s'
+    setTimeout(() => {
+        chatbot.style.display = 'none';
+        background.style.display = 'flex'
+        background.style.animation = 'rotatee 1.5s'
+    }, 1500)
+
+})
+robot1.addEventListener('click', () => {
+    background.style.animation = 'collapse 1.5s'
+    setTimeout(() => {
+        background.style.display = 'none';
+        chatbot.style.display = 'grid'
+        visible.style.display = 'block'
+        chatbot.style.animation = 'rotatee 1.5s'
+    }, 1500)
+})
