@@ -28,7 +28,6 @@ def get_input(text,previous_conversation=None,last_n=5):
             'past_user_inputs':[],
             'generated_responses':[]
             }
-        print(True)
 
     i = {
         "inputs":
@@ -40,13 +39,17 @@ def get_input(text,previous_conversation=None,last_n=5):
     }
     return i
     
-def talk(text,prev_user_input,generated_response):
-    previous_convo ={
-        'past_user_inputs':prev_user_input,
-        'generated_responses':generated_response
-        }
-    inp = get_input(text,previous_conversation=previous_convo)
-    out = query(inp)
+def talk(text,prev_convo):
+    '''
+    Make the bot talk based on the given constraints,
+    see get_input to understand the given parameters
+    '''
+    if prev_convo:
+        inp = get_input(text,previous_conversation=prev_convo)
+        out = query(inp)
+    else:
+        inp = get_input(text,)
+        out = query(inp)
     return out
 
 def main():
