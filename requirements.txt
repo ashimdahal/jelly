@@ -9,3 +9,4 @@ python==3.8.12
 google-cloud-translate
 nepali-unicode-converter
 nepali-roman
+werkzeug==2.0.3

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+        font-family: Helvetica, sans-serif, Arial;
+        font-size: 62.5%;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgba(236, 223, 223, 0.925);
+        height: 60rem;
+        width: 100%;
+      }
+      section {
+        height: 55rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.6rem;
+      }
+  
+      section h2 {
+        margin-bottom: 4rem;
+        background-color: rgb(219, 219, 219);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        color: rgb(87, 77, 77);
+        box-shadow: -0.5rem 1rem 1rem rgba(126, 24, 24, 0.89);
+        /* width: 70%; */
+        text-align: center;
+      }
+
+      .token {
+        height: 40rem;
+        width: 40rem;
+        border: 1rem solid white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: -1rem 2rem 1rem rgb(116, 11, 11);
+      }
+      .token form {
+        padding: 2rem;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+      }
+      .token form input {
+        padding: 1.3rem;
+        width: 90%;
+
+        font-size: 1.5rem;
+        text-align: center;
+        border-radius: 1rem;
+      }
+      .btn {
+        padding: 1.3rem;
+        margin-top: 1rem;
+        width: 8rem;
+
+        font-size: 1.3rem;
+
+        cursor: pointer;
+        border-radius: 0.5rem;
+        border: none;
+        box-shadow: -0.3rem 1.3rem 1rem rgb(165, 50, 50);
+        font-weight: bold;
+      }
+      .btn:hover {
+        background-color: #870303;
+        color: white;
+      }
+      .generateLink {
+        margin-top: 2rem;
+        font-weight: bold;
+        text-decoration: none;
+
+        color: blue;
+      }
+      .generateLink:hover {
+        color: rgba(20, 20, 173, 0.849);
+        text-decoration: underline;
+      }
+      .token form input[type="file"] {
+        border: none;
+        cursor: pointer;
+      }
+      .token form label {
+        margin-top: 2rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 0.2rem;
+        color: rgba(90, 88, 88, 0.801);
+      }
+      #file {
+        padding: 1rem;
+
+        background-color: rgb(73, 72, 72);
+
+        color: white;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <h2>
+          <marquee behavior="" direction="">
+            You have to enter your API token and upload the json file to chat
+            with Jelly.</marquee
+          >
+        </h2>
+      </div>
+      <div class="token">
+        <form action="/" method="post" enctype="multipart/form-data">
+          <label for="token">Enter your API token here </label>
+          <input
+            type="text"
+            placeholder="For eg:hf_rFDhNdyHYAQEeQFEdsfvMimCYqUSWmmVZ"
+            required
+            class="api"
+            name="token"
+            id="token"
+          />
+          <label for="file">Upload your json file here</label>
+          <input type="file" id="file" name="file" accept=".json" required />
+          <button class="btn" type="submit">submit</button>
+        </form>
+        <a
+          class="generateLink"
+          href="https://huggingface.co/docs/api-inference/index"
+          >Generate token--></a
+        >
+        <a class="generateLink" href="#">Generate json file--></a>
+      </div>
+    </section>
+  </body>
+</html>
