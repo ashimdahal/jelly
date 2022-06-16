@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='img/favicon.ico')}}" />
-  <link rel="stylesheet" href=" {{url_for('static', filename='css/style.css')}}" />    
-  <script defer src=" {{url_for('static', filename='scripts/index.js')}}"></script>
-  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-  <title>Chat Bot</title>
-</head>
-<body >
-  <section id="chatbot">
-    <div class="flexer">
-      <div class="chat-bar-collapsible">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='img/favicon.ico')}}" />
+    <link rel="stylesheet" href=" {{url_for('static', filename='css/style.css')}}" />
+    <script defer src=" {{url_for('static', filename='scripts/index.js')}}"></script>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title>Chat Bot</title>
+  </head>
+  <body >
+    <section class="main-section">
+    <section class="background" id="background">
+      <div class="intro">
+        <h2> <span style="--color:red;" > HELLO, I AM JELLY.</span> <span style="--color:rgb(11, 168, 32);">I CAN REPLY TO YOUR </span> <span style="--color:rgb(0, 47, 255);""> ROMANIZED NEPALI</span></h2>
+      </div>
+      <div class="img-container" id="img-cont">
+        <img id="robot1" src="{{url_for('static', filename='img/chatbot2.png')}}" >
+
+        <div class="conversation"><span  >Click on me !</span></div>
+      </div>
+    </section>
+
+    <section id="chatbot">
+      <div class="flexer">
+        <div class="chat-bar-collapsible">
         <div class="chat-navbar-collapsible">
           <div class="right-head">
             <img src=" {{url_for('static', filename='img/kylie1.jpg')}}" alt="profile_picture" />
@@ -21,117 +33,118 @@
             <i class="fa fa-comments chaticon" aria-hidden="true" style="font-size: 2.2rem;"></i>
           </div>
           <div class="left-head">
-            
+           
             <div id="dark" style="display: inline-block;">
-              <i class="fa fa-circle chaticon" aria-hidden="true" id="darkmode" style="color: white;" >
-                <span id="DBM" style="color: white;">Dark mode</span>
-              </i>
-            </div>
+            <i class="fa fa-circle chaticon" aria-hidden="true" id="darkmode" style="color: white;" >
+              <span id="DBM" style="color: white;">Dark mode</span>
+            </i>
+          </div>
             <i  class="fa fa-info-circle chaticon" id="collapser" aria-hidden="true"><span id="chatemoji2">conversational info</span></i>
             <i id="close" class="fa fa-times chaticon"  aria-hidden="true"><span id="chatemoji3">close</span></i>
           </div>
         </div>
         <div class="full-chat-block">
-          
-          <div class="outer-container">
-            <div class="chat-container">
-              
-              <div class="bigchatbox">
-                <div id="chatbox">
-                  <h5 id="chat-timestamp"></h5>
-                  <p id="botStarterMessage" class="botText"><img src="{{url_for('static', filename='img/robot.png')}}"><span>Loading...</span></p>
-                  
-                  <!-- <p id="botStarterMessage" class="userText"><span>How are you bot</span></p> -->
-                  
+
+            <div class="outer-container">
+                <div class="chat-container">
+           
+                    <div class="bigchatbox">
+                    <div id="chatbox">
+                        <h5 id="chat-timestamp"></h5>
+                        <p id="botStarterMessage" class="botText"><img src="{{url_for('static', filename='img/robot.png')}}"><span>Loading...</span></p>
+                        
+                        <!-- <p id="botStarterMessage" class="userText"><span>How are you bot</span></p> -->
+                        
+                    </div>
                 </div>
+
+                    <!-- User input box -->
+                    <form method="post" id="formm" action="/" >
+
+                    <div class="chat-bar-input-block">
+                        <div id="userInput" >
+                            <input id="textInput" class="input-box" type="text" name="msg"
+                                placeholder="Tap 'Enter' to send a message">
+                            
+                        </div>
+
+                        <div class="chat-bar-icons">
+                         
+                         
+                            <i id="chat-icon4" style="color: crimson;" class="fa fa-fw fa-heart"
+                                onclick="heartButton()">  <span id="emoji">choose an emoji</span></i>
+                                <button type="submit" onclick="sendButton()">
+                            <i id="chat-icon5" style="color: #333;" class="fa fa-fw fa-send"
+                                ></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                    <div id="chat-bar-bottom">
+                        <p></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+                </div>
+
+
+      </div>
+      <div id="conversation" class="conversational-info">
+        <div class="personal-info">
+          <img src="{{url_for('static', filename='img/kylie1.jpg')}}" alt="profile_picture" />
+          <strong>Kylie Jenner</strong>
+        </div>
+        <hr class="indicator">
+            <div class="customise-chat" >
+              <div class="customise"id="dropdown1">
+              <strong>Customise chat-look</strong>
+              <i class="fa fa-angle-down" 
+              aria-hidden="true"></i>
+            </div>
+              <div class="content" id="dropdown_content1" style="display: none;">
+                <div class="theme">
+                  <i class="fa fa-themeisle" aria-hidden="true"></i>
+                <span>change theme</span>
+              </div>
+                <div class="theme">
+                  <i class="fa fa-font" aria-hidden="true"></i>
+                <span>change font-style</span>
               </div>
               
-              <!-- User input box -->
-              <form method="post" id="formm" autocomplete="off" >
-                
-                <div class="chat-bar-input-block">
-                  <div id="userInput" >
-                    <input id="textInput" class="input-box" type="text" name="msg"
-                    placeholder="Tap 'Enter' to send a message">
-                    
-                  </div>
-                  
-                  <div class="chat-bar-icons">
-                    
-                    
-                    <i id="chat-icon4" style="color: crimson;" class="fa fa-fw fa-heart"
-                    onclick="heartButton()">  <span id="emoji">choose an emoji</span></i>
-                    <button type="submit" id="button">
-                      <i id="chat-icon5" style="color: #333;" class="fa fa-fw fa-send"
-                      ></i>
-                    </button>
-                  </div>
-                </div>
-              </form>
               
-              <div id="chat-bar-bottom">
-                <p></p>
+            </div>
+            </div>
+            
+            <div class="customise-chat"  >
+              <div class="customise" id="dropdown2" >
+              <strong>customise conversation</strong>
+              <i class="fa fa-angle-down" 
+              aria-hidden="true"></i>
+            </div>
+            <div class="content" id="dropdown_content2" style="display:none;">
+                <div class="theme">
+                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+                <span>Delete conversation</span></div>
+                <div class="theme">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                <span>Search Conversation</span>
+              </div>
               </div>
               
             </div>
           </div>
-          
-        </div>
-      </div>
-      
-      
+            
     </div>
-    <div id="conversation" class="conversational-info">
-      <div class="personal-info">
-        <img src="{{url_for('static', filename='img/kylie1.jpg')}}" alt="profile_picture" />
-        <strong>Kylie Jenner</strong>
-      </div>
-      <hr class="indicator">
-      <div class="customise-chat" >
-        <div class="customise"id="dropdown1">
-          <strong>Customise chat-look</strong>
-          <i class="fa fa-angle-down" 
-          aria-hidden="true"></i>
-        </div>
-        <div class="content" id="dropdown_content1" style="display: none;">
-          <div class="theme">
-            <i class="fa fa-themeisle" aria-hidden="true"></i>
-            <span>change theme</span>
-          </div>
-          <div class="theme">
-            <i class="fa fa-font" aria-hidden="true"></i>
-            <span>change font-style</span>
-          </div>
-          
-          
-        </div>
-      </div>
-      
-      <div class="customise-chat"  >
-        <div class="customise" id="dropdown2" >
-          <strong>customise conversation</strong>
-          <i class="fa fa-angle-down" 
-          aria-hidden="true"></i>
-        </div>
-        <div class="content" id="dropdown_content2" style="display:none;">
-          <div class="theme">
-            <i class="fa fa-trash-o" aria-hidden="true"></i>
-            <span>Delete conversation</span></div>
-            <div class="theme">
-              <i class="fa fa-search" aria-hidden="true"></i>
-              <span>Search Conversation</span>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-      
-    </div>
+    </section>
   </section>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  
-  <script>
-    // basic ajax starts here
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='scripts/responses.js')}}"></script>
+    <script >
+      // basic ajax starts here
     var frm = $('#formm');
     
     frm.submit(function (e) {
@@ -190,8 +203,8 @@
             },
           });
         });
-        
-      </script>
-    </body>
-    </html>
-    
+     
+  </script>
+  
+  </body>
+</html>
