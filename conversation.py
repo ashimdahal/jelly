@@ -1,8 +1,20 @@
 from bot.blenderbot import *
-from nlp.gcloud import *
 # go to bot/blenderbot.py and insert your personal API KEY before calling or else it won't work
 from nepali_unicode_converter.convert import Converter
 import nepali_roman as nr
+from os import environ,path
+
+if 'GOOGLE_APPLICATION_CREDENTIALS' in environ:
+    if path.exists(environ['GOOGLE_APPLICATION_CREDENTIALS']):
+        from nlp.gcloud import *
+    else:
+        from nlp.api import *
+        detect_language = detect_lang
+else:
+    from api import *
+    detect_language = detect_lang
+
+
 
 converter = Converter()
 def get_input(text,previous_conversation=None,last_n=5):
@@ -51,7 +63,7 @@ def talk(text,prev_convo):
     source = 'ne'
     target = 'en-US'
 
-    if 'en' in detect_language(text):
+    if 'en' in asyncio.run(detect_language(text)):
         pass
     else:
         unicoded_nepali = converter.convert(text)
@@ -76,18 +88,18 @@ def main():
         source = 'ne'
         target = 'en-US'
 
-        if 'en' in detect_language(inp):
+        if 'en' in asyncio.run(detect_language(inp)):
             pass
         else:
             unicoded_nepali = converter.convert(inp)
-            inp = translate_text(unicoded_nepali, source, target)
+            inp = asyncio.run(translate_text(unicoded_nepali, source, target))
         if 'out' in locals():
             i = get_input(inp,previous_conversation = out['conversation'])
        
         else:
             i = get_input(inp)
         out = query(i)
-        nepali_out = translate_text(out['generated_text'], 'en-US', 'ne')
+        nepali_out = asyncio.run(translate_text(out['generated_text'], 'en-US', 'ne'))
         print('bot: ',nr.romanize_text(nepali_out))
 
 if __name__ == '__main__':
