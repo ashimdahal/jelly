@@ -27,9 +27,16 @@ def detect_language(text):
     # will return a sequence of results for each text.
     result = translate_client.detect_language(text)
     return result["language"]
-# source = 'ne'
-# target = 'en-US'
 
-# inp = converter.convert('mero kukur xa')
-# print(translate_text('how are you doing',source,target))
+if __name__=='__main__':
+    source = 'en-US'
+    target = 'ne'
+    try:
+        print(translate_text('Hello, I just got back from walking my dog',source,target))
+    except:
+        print('ok')
+
+#source = 'ne'
+#target = 'en-US'
+
 # print(detect_language('kukur'))
