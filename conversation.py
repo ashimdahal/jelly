@@ -67,7 +67,7 @@ def talk(text,prev_convo):
         pass
     else:
         unicoded_nepali = converter.convert(text)
-        text = translate_text(unicoded_nepali, source, target)
+        text = asyncio.run(translate_text(unicoded_nepali, source, target))
 
     if prev_convo:
         inp = get_input(text,previous_conversation=prev_convo)
@@ -75,7 +75,7 @@ def talk(text,prev_convo):
         inp = get_input(text,)
 
     out = query(inp)
-    generated_nepali = translate_text(out['generated_text'], 'en-US', 'ne')
+    generated_nepali = asyncio.run(translate_text(out['generated_text'], 'en-US', 'ne'))
     out['generated_text'] = nr.romanize_text(generated_nepali).replace('0','o')
     return out
 
