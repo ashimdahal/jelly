@@ -61,7 +61,7 @@ def talk(text,prev_convo):
     see get_input to understand the given parameters
     '''
     source = 'ne'
-    target = 'en-US'
+    target = 'en'
 
     if 'en' in asyncio.run(detect_language(text)):
         pass
@@ -75,7 +75,7 @@ def talk(text,prev_convo):
         inp = get_input(text,)
 
     out = query(inp)
-    generated_nepali = asyncio.run(translate_text(out['generated_text'], 'en-US', 'ne'))
+    generated_nepali = asyncio.run(translate_text(out['generated_text'], 'en', 'ne'))
     out['generated_text'] = nr.romanize_text(generated_nepali).replace('0','o')
     return out
 
