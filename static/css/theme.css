@@ -1,0 +1,50 @@
+/* This is for the dark theme */
+.darktheme {
+  margin-top: 1.2rem;
+  background-color: #625d5d61;
+  padding: 0.6rem;
+}
+.darktheme .theme1 i {
+  font-size: 2rem;
+  margin-right: 1.5rem;
+
+  color: white;
+}
+
+.darktheme .theme1 {
+  user-select: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+
+  margin-top: 0.4rem;
+  padding: 1rem;
+}
+.darktheme .theme1:hover {
+  background-color: black;
+  border-radius: 1.5rem;
+}
+/* This is for the red theme */
+.darkredtheme {
+  margin-top: 1.2rem;
+  background-color: rgb(190, 19, 19);
+  padding: 0.6rem;
+}
+.darkredtheme .theme1 i {
+  font-size: 2rem;
+  margin-right: 1.5rem;
+
+  color: white;
+}
+
+.darkredtheme .theme1 {
+  user-select: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+
+  margin-top: 0.4rem;
+  padding: 1rem;
+}
+.darkredtheme .theme1:hover {
+  background-color: darkred;
+  border-radius: 1.5rem;
+}

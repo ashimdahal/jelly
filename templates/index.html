@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='img/favicon.ico')}}" />
     <link rel="stylesheet" href=" {{url_for('static', filename='css/style.css')}}" />
+    <link rel="stylesheet" href=" {{url_for('static', filename='css/theme.css')}}" />
     <script defer src=" {{url_for('static', filename='scripts/index.js')}}"></script>
+    <script defer src=" {{url_for('static', filename='scripts/theme.js')}}"></script>
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <title>Chat Bot</title>
   </head>
@@ -47,21 +49,35 @@
 
             <div class="outer-container">
                 <div class="chat-container">
+
+                  <!-- Search bar -->
+                  <div class="searchbar" id="searchbar" style="display: none;">
+                    <div class="innerSearchbar">
+                     
+                       <i class="fa fa-search" aria-hidden="true" id="searchFontIcon"></i>
+                       <span id="closee">close</span>
+                        <input type="text" class="text-field" id="user-TextInput" placeholder="Search Conversation">
+                        
+                        
+                        
+                     
+                    </div>
+                  </div>
            
                     <div class="bigchatbox">
                     <div id="chatbox">
                         <h5 id="chat-timestamp"></h5>
-                        <p id="botStarterMessage" class="botText"><img src="{{url_for('static', filename='img/robot.png')}}"><span>Loading...</span></p>
+                        <p id="botStarterMessage" class="botText"><img src="{{url_for('static', filename='img/robot.png')}}"><span id="botMessage" class="search">Loading...</span></p>
                         
-                        <!-- <p id="botStarterMessage" class="userText"><span>How are you bot</span></p> -->
+                        <p id="botStarterMessage" class="userText"><span class="search">How are you bot</span></p>
                         
                     </div>
                 </div>
 
                     <!-- User input box -->
-                    <form method="post" id="formm" action="/" >
+                    <form method="post" id="formm" autocomplete="off" >
 
-                    <div class="chat-bar-input-block">
+                    <div class="chat-bar-input-block" id="input-block">
                         <div id="userInput" >
                             <input id="textInput" class="input-box" type="text" name="msg"
                                 placeholder="Tap 'Enter' to send a message">
@@ -71,10 +87,10 @@
                         <div class="chat-bar-icons">
                          
                          
-                            <i id="chat-icon4" style="color: crimson;" class="fa fa-fw fa-heart"
+                            <i id="chat-icon4" style="color: #ff0030;" class="fa fa-fw fa-heart"
                                 >  <span id="emoji">choose an emoji</span></i>
                                 <button type="submit">
-                            <i id="chat-icon5" style="color: #333;" class="fa fa-fw fa-send"></i>
+                            <i id="chat-icon5" style="color: rgb(34, 33, 33);" class="fa fa-fw fa-send"></i>
                             </button>
                         </div>
                     </div>
@@ -90,7 +106,28 @@
         </div>
                 </div>
 
-
+            <div class="outerTheme-container" id="outerTheme-Container">
+              <div class="innerTheme-container">
+              <div class="theme-container" >
+                <div class="close-theme" id="close-Theme">
+                  <strong>Themes</strong>
+                  <i id="closeThemeContainer" class="fa fa-times-circle-o" aria-hidden="true"></i>   
+              </div>
+              <div class="theme-items">
+                <div id="dark-red-theme"></div>
+                <div id="theme-item2"></div>
+                <div id="theme-item3"></div>
+                <div id="theme-item4"></div>
+                <div id="theme-item5"></div>
+                <div id="theme-item6"></div>
+                <div id="theme-item7"></div>
+                <div id="theme-item8"></div>
+                <div id="theme-item9"></div>
+                <div id="theme-item10"></div>
+              </div>
+              </div> 
+            </div>
+            </div>
       </div>
       <div id="conversation" class="conversational-info">
         <div class="personal-info">
@@ -101,16 +138,26 @@
             <div class="customise-chat" >
               <div class="customise"id="dropdown1">
               <strong>Customise chat-look</strong>
-              <i class="fa fa-angle-down" 
+              <i id="angle_down1" class="fa fa-angle-down" 
+              aria-hidden="true"></i>
+              <i style="display:none;" id="angle_up1" class="fa fa-angle-up" 
               aria-hidden="true"></i>
             </div>
               <div class="content" id="dropdown_content1" style="display: none;">
-                <div class="theme">
-                  <i class="fa fa-themeisle" aria-hidden="true"></i>
-                <span>change theme</span>
+                <div class="theme1" id="changeThemeButton">
+                  <i id="themeicon1" class="fa fa-themeisle" aria-hidden="true"></i>
+                <span class="change-theme">change theme
+                  <!-- <div class="themes">
+                    <span>ram <input type="color" disable ></span>
+                    <span>ram</span>
+                    <span>ram</span>
+                    <span>ram</span>
+
+                  </div> -->
+                </span>
               </div>
-                <div class="theme">
-                  <i class="fa fa-font" aria-hidden="true"></i>
+                <div class="theme1">
+                  <i id="themeicon2" class="fa fa-font" aria-hidden="true"></i>
                 <span>change font-style</span>
               </div>
               
@@ -121,15 +168,16 @@
             <div class="customise-chat"  >
               <div class="customise" id="dropdown2" >
               <strong>customise conversation</strong>
-              <i class="fa fa-angle-down" 
+              <i id="angle_down2" class="fa fa-angle-down" 
               aria-hidden="true"></i>
+              <i style="display:none;" id="angle_up2" class="fa fa-angle-up" aria-hidden="true"></i>
             </div>
-            <div class="content" id="dropdown_content2" style="display:none;">
-                <div class="theme">
-                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+            <div  class="content" id="dropdown_content2" style="display:none;">
+                <div class="theme1" id="deleteConversation">
+                  <i id="themeicon3" class="fa fa-trash-o" aria-hidden="true"></i>
                 <span>Delete conversation</span></div>
-                <div class="theme">
-                  <i class="fa fa-search" aria-hidden="true"></i>
+                <div class="theme1" id="searchConversation">
+                  <i id="themeicon4" class="fa fa-search" aria-hidden="true"></i>
                 <span>Search Conversation</span>
               </div>
               </div>
@@ -203,6 +251,16 @@
           });
         });
      
+      // var form2 = $("#form2");
+      // form2.submit(function(e){
+      //   e.preventDefault();
+      //   var userINput = new Array( $("#user-TextInput").val())
+      //   console.log(userINput)
+        
+
+        
+      //   $("#user-TextInput").val("")
+      // })
   </script>
   
   </body>
