@@ -11,7 +11,7 @@ if 'GOOGLE_APPLICATION_CREDENTIALS' in environ:
         from nlp.api import *
         detect_language = detect_lang
 else:
-    from api import *
+    from nlp.api import *
     detect_language = detect_lang
 
 
