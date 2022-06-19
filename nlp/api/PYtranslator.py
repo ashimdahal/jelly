@@ -17,7 +17,7 @@ except:
     except:
         from .constant import LANGUAGES, DEFAULT_SERVICE_URLS
 
-    
+LANGUAGES.set_default('keyerror')
 log = logging.getLogger(__name__)
 log.addHandler(logging.NullHandler())
 
