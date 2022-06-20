@@ -17,7 +17,6 @@ except:
     except:
         from .constant import LANGUAGES, DEFAULT_SERVICE_URLS
 
-LANGUAGES.setdefault('keyerror')
 log = logging.getLogger(__name__)
 log.addHandler(logging.NullHandler())
 
@@ -209,7 +208,7 @@ class google_translator:
                         detect_lang = response[0][2]
                     except Exception:
                         raise Exception
-                    return [detect_lang, LANGUAGES[detect_lang.lower()]]
+                    return [detect_lang, LANGUAGES.get(detect_lang.lower())]
             r.raise_for_status()
         except requests.exceptions.HTTPError as e:
             log.debug(str(e))
