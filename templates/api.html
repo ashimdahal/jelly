@@ -22,7 +22,7 @@
         width: 100%;
       }
       section {
-        height: 55rem;
+        height: 65rem;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -31,17 +31,6 @@
         font-size: 1.6rem;
       }
   
-      section h2 {
-        margin-bottom: 4rem;
-        background-color: rgb(219, 219, 219);
-        padding: 1.5rem;
-        border-radius: 1rem;
-        margin-top: 1rem;
-        color: rgb(87, 77, 77);
-        box-shadow: -0.5rem 1rem 1rem rgba(126, 24, 24, 0.89);
-        /* width: 70%; */
-        text-align: center;
-      }
 
       .token {
         height: 40rem;
@@ -97,36 +86,20 @@
         color: rgba(20, 20, 173, 0.849);
         text-decoration: underline;
       }
-      .token form input[type="file"] {
-        border: none;
-        cursor: pointer;
-      }
+  
       .token form label {
         margin-top: 2rem;
         font-weight: bold;
         text-align: center;
-        margin-bottom: 0.2rem;
+        margin-bottom: .6rem;
         color: rgba(90, 88, 88, 0.801);
       }
-      #file {
-        padding: 1rem;
-
-        background-color: rgb(73, 72, 72);
-
-        color: white;
-        font-weight: bold;
-      }
+    
     </style>
   </head>
   <body>
     <section>
       <div>
-        <h2>
-          <marquee behavior="" direction="">
-            You have to enter your API token and upload the json file to chat
-            with Jelly.</marquee
-          >
-        </h2>
       </div>
       <div class="token">
         <form action="/" method="post" enctype="multipart/form-data">
@@ -139,8 +112,6 @@
             name="token"
             id="token"
           />
-          <label for="file">Upload your json file here</label>
-          <input type="file" id="file" name="file" accept=".json"  />
           <button class="btn" type="submit">submit</button>
         </form>
         <a
@@ -148,7 +119,6 @@
           href="https://huggingface.co/docs/api-inference/index"
           >Generate token--></a
         >
-        <a class="generateLink" href="#">Generate json file--></a>
       </div>
     </section>
   </body>
