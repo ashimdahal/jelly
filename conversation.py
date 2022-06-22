@@ -63,9 +63,7 @@ def talk(text,prev_convo):
     source = 'ne'
     target = 'en'
 
-    if 'en' in asyncio.run(detect_language(text)):
-        pass
-    else:
+    if 'en' not in asyncio.run(detect_language(text)):
         unicoded_nepali = converter.convert(text)
         text = asyncio.run(translate_text(unicoded_nepali, source, target))
 
