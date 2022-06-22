@@ -72,11 +72,12 @@ def talk(text,prev_convo):
     if prev_convo:
         inp = get_input(text,previous_conversation=prev_convo)
     else:
-        inp = get_input(text,)
+        inp = get_input(text)
 
     out = query(inp)
     generated_nepali = asyncio.run(translate_text(out['generated_text'], 'en', 'ne'))
-    out['generated_text'] = nr.romanize_text(generated_nepali).replace('0','o')
+    out['generated_text'] = nr.romanize_text(generated_nepali).replace('0','o')\
+        .replace('tapaim','tapai')
     return out
 
 def main():
