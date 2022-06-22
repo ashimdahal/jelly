@@ -1,8 +1,7 @@
 import requests
 token = open('/home/ashim/Documents/python/projects/jelly/bot/token.txt').read()
 API_URL = "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill"
-headers = {"Authorization": "Bearer {token}"}
-
+headers = {"Authorization": f"Bearer {token}"}
 def query(payload):
 	response = requests.post(API_URL, headers=headers, json=payload)
 	return response.json()

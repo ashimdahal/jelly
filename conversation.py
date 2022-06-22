@@ -87,17 +87,18 @@ def main():
         source = 'ne'
         target = 'en-US'
 
-        if 'en' in asyncio.run(detect_language(inp)):
-            pass
-        else:
+        if 'en' not in asyncio.run(detect_language(inp)):
             unicoded_nepali = converter.convert(inp)
             inp = asyncio.run(translate_text(unicoded_nepali, source, target))
+
         if 'out' in locals():
             i = get_input(inp,previous_conversation = out['conversation'])
        
         else:
             i = get_input(inp)
         out = query(i)
+        print(i)
+        print(out)
         nepali_out = asyncio.run(translate_text(out['generated_text'], 'en-US', 'ne'))
         print('bot: ',nr.romanize_text(nepali_out))
 
