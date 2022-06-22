@@ -1,8 +1,3 @@
-gensim==3.7.3
-spello==1.2.0
-snowballstemmer
-tensorflow
-sentencepiece
 Flask==2.1.2
 Werkzeug==2.1.2
 python==3.8.12
