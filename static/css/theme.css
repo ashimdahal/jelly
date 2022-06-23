@@ -8,7 +8,7 @@
   font-size: 2rem;
   margin-right: 1.5rem;
 
-  color: white;
+  color: #fafafa;
 }
 
 .darktheme .theme1 {
@@ -20,7 +20,7 @@
   padding: 1rem;
 }
 .darktheme .theme1:hover {
-  background-color: black;
+  background-color: #121212;
   border-radius: 1.5rem;
 }
 /* This is for the red theme */
@@ -33,7 +33,7 @@
   font-size: 2rem;
   margin-right: 1.5rem;
 
-  color: white;
+  color: #fafafa;
 }
 
 .darkredtheme .theme1 {
