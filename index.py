@@ -1,17 +1,18 @@
 from flask import Flask, render_template, request, jsonify
 from conversation import *
 import json
-
-
+import os
 
 app = Flask(__name__)
 
-
 @app.route('/', methods=['GET', 'POST'])
 def api():
+    if os.path.exists(os.path.join('bot','token.txt')):
+        return render_template('index.html')
+
     if request.method == 'POST':
         token = request.form.get('token')
-        with open('bot/token.txt', 'w') as e:
+        with open(os.path.join('bot','token.txt'), 'w') as e:
             e.write(token)
         return render_template('index.html')
         
