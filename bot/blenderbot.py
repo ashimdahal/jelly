@@ -1,5 +1,8 @@
-import requests
-token = open('/home/ashim/Documents/python/projects/jelly/bot/token.txt').read()
+import requests,os
+try:
+	token = open(os.path.join('bot','token.txt')).read()
+except:
+	pass
 API_URL = "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill"
 headers = {"Authorization": f"Bearer {token}"}
 def query(payload):
