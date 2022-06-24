@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, jsonify
-from conversation import *
 import json
 import os
 
@@ -22,6 +21,8 @@ def api():
 # Gets user's input, runs it through the talk function in conversation.py and generates the output
 @app.route('/getresponse',methods=['POST'])
 def response():
+    from conversation import talk
+
     user_inp = request.get_json()
     text = user_inp['text']
     prev_conv = user_inp['previous_conversaion']
