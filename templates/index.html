@@ -7,32 +7,22 @@
     <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='img/favicon.ico')}}" />
     <link rel="stylesheet" href=" {{url_for('static', filename='css/style.css')}}" />
     <link rel="stylesheet" href=" {{url_for('static', filename='css/theme.css')}}" />
+    <link rel="stylesheet" href=" {{url_for('static', filename='css/responsive.css')}}" />
     <script defer src=" {{url_for('static', filename='scripts/index.js')}}"></script>
     <script defer src=" {{url_for('static', filename='scripts/theme.js')}}"></script>
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <title>Chat Bot</title>
   </head>
   <body >
-    <section class="main-section">
-    <section class="background" id="background">
-      <div class="intro">
-        <h2> <span style="--color:red;" > HELLO, I AM JELLY.</span> <span style="--color:rgb(11, 168, 32);">I CAN REPLY TO YOUR </span> <span style="--color:rgb(0, 47, 255);""> ROMANIZED NEPALI</span></h2>
-      </div>
-      <div class="img-container" id="img-cont">
-        <img id="robot1" src="{{url_for('static', filename='img/chatbot2.png')}}" >
-
-        <div class="conversation"><span  >Click on me !</span></div>
-      </div>
-    </section>
-
-    <section id="chatbot">
-      <div class="flexer">
+    <section class="main-section" id="main-section" >
+    <section id="chatbot" >
+      <div class="flexer" id="flexer">
         <div class="chat-bar-collapsible">
         <div class="chat-navbar-collapsible">
           <div class="right-head">
-            <img src=" {{url_for('static', filename='img/kylie1.jpg')}}" alt="profile_picture" />
-            <strong ">Kylie Jenner</strong>
-            <i class="fa fa-comments chaticon" aria-hidden="true" style="font-size: 2.2rem;"></i>
+            <img src=" {{url_for('static', filename='img/chatbot1.png')}}" alt="profile_picture" />
+            <strong ">Jelly</strong>
+            <i id="comments" class="fa fa-comments chaticon" aria-hidden="true" style="font-size: 2.2rem;"></i>
           </div>
           <div class="left-head">
            
@@ -50,7 +40,11 @@
             <div class="outer-container">
                 <div class="chat-container">
 
-                  <!-- Search bar -->
+                
+           
+                    <div class="bigchatbox">
+                    <div id="chatbox" class="chatbox">
+                              <!-- Search bar -->
                   <div class="searchbar" id="searchbar" style="display: none;">
                     <div class="innerSearchbar">
                      
@@ -63,13 +57,10 @@
                      
                     </div>
                   </div>
-           
-                    <div class="bigchatbox">
-                    <div id="chatbox">
                         <h5 id="chat-timestamp"></h5>
-                        <p id="botStarterMessage" class="botText"><img src="{{url_for('static', filename='img/robot.png')}}"><span id="botMessage" class="search">Loading...</span></p>
+                        <p id="botStarterMessage" class="botText search"><img src="{{url_for('static', filename='img/chatbot1.png')}}"><span class="botMessage" >Loading...</span></p>
                         
-                        <p id="botStarterMessage" class="userText"><span class="search">How are you bot</span></p>
+                        <!-- <p id="botStarterMessage" class="userText"><span class="search">How are you bot</span></p> -->
                         
                     </div>
                 </div>
@@ -129,10 +120,14 @@
             </div>
             </div>
       </div>
-      <div id="conversation" class="conversational-info">
+      <div id="conversation" class="conversational-info" style="display:none;">
+        <div class="back" >
+
+        <i id="back" class="fa fa-arrow-left" aria-hidden="true"></i>
+        </div>
         <div class="personal-info">
-          <img src="{{url_for('static', filename='img/kylie1.jpg')}}" alt="profile_picture" />
-          <strong>Kylie Jenner</strong>
+          <img src="{{url_for('static', filename='img/chatbot2.png')}}" alt="profile_picture" />
+          <h3>Jelly</h3>
         </div>
         <hr class="indicator">
             <div class="customise-chat" >

@@ -1,0 +1,118 @@
+@media all and (max-width: 1000px) {
+  .personal-info img {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+@media all and (max-width: 300px) {
+  #chat-icon4,
+  #chat-icon5 {
+    margin: 0.2rem;
+  }
+}
+@media all and (max-width: 880px) {
+  .conversational-info {
+    font-size: 1.5rem;
+  }
+  .content .theme1 {
+    padding: 1rem 0.2rem;
+  }
+  .customise {
+    padding: 1rem 0;
+  }
+  .personal-info strong {
+    font-size: 1.6rem;
+  }
+  .innerSearchbar {
+    font-size: 1.5rem;
+    padding: 0.7rem 1.6rem;
+  }
+  .innerSearchbar input {
+    font-size: 1.4rem;
+    padding-left: 4rem;
+  }
+  .innerSearchbar i {
+    padding: 0.8rem 1.3rem;
+  }
+  /* theme-container */
+  .theme-container{
+    height:55rem;
+    width:28.5rem;
+  }
+  .theme-items{
+    padding: 1.5rem;
+    grid-row-gap: 1rem;
+    grid-column-gap:.5rem;
+  }
+  .theme-items div{
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+}
+@media all and (max-width: 680px) {
+  .innerSearchbar {
+    padding: 0.6rem 0.3rem;
+  }
+
+  .chat-navbar-collapsible {
+    border: none;
+  }
+  .searchbar{
+    border: none;
+  }
+
+  #closee {
+    padding: 1rem 0.5rem;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  #chatbox::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  #chatbox {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+@media all and (max-width: 635px) {
+  .back {
+    display: block;
+  }
+  .conversational-info {
+    font-size: 1.6rem;
+  }
+
+}
+@media all and (max-width: 505px) {
+  html {
+    font-size: 57%;
+  }
+  #chat-icon4,
+  #chat-icon5 {
+    font-size: 1.9rem;
+  }
+  .chat-navbar-collapsible {
+    padding: 0.4rem;
+  }
+  .right-head strong {
+    margin-left: 1rem;
+  }
+  #close, #collapser {
+    font-size: 2rem;
+  }
+   
+  #comments {
+  display:none;
+  }
+  #dark{
+    display: none;
+    padding: .1rem;
+    height: 2.4;
+  }
+  #darkmode {
+    font-size: 1.5rem;
+    padding: .7rem 0;
+  }
+}
