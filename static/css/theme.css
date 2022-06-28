@@ -1,3 +1,14 @@
+
+@media (hover: hover) {
+  .darkredtheme .theme1:hover {
+    background-color: darkred;
+    border-radius: 1.5rem;
+  }
+  .darktheme .theme1:hover {
+    background-color: #121212;
+    border-radius: 1.5rem;
+  }
+}
 /* This is for the dark theme */
 .darktheme {
   margin-top: 1.2rem;
@@ -19,9 +30,21 @@
   margin-top: 0.4rem;
   padding: 1rem;
 }
-.darktheme .theme1:hover {
-  background-color: #121212;
-  border-radius: 1.5rem;
+
+.darkchatbox .botMessage{
+  line-height: 1.5em;
+  word-break: break-word;
+  display: inline-block;
+  background: rgb(84 84 84 / 48%);
+  color: #fafafa;
+
+  padding: 1rem;
+  border-radius: 1rem;
+  border-bottom-left-radius: 1.7rem;
+  max-width: 80%;
+  margin-left: 0.5rem;
+
+  animation: floatup 0.5s forwards;
 }
 /* This is for the red theme */
 .darkredtheme {
@@ -44,7 +67,4 @@
   margin-top: 0.4rem;
   padding: 1rem;
 }
-.darkredtheme .theme1:hover {
-  background-color: darkred;
-  border-radius: 1.5rem;
-}
+
