@@ -1,125 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      html {
-        scroll-behavior: smooth;
-        font-family: Helvetica, sans-serif, Arial;
-        font-size: 62.5%;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        background-color: rgba(236, 223, 223, 0.925);
-        height: 60rem;
-        width: 100%;
-      }
-      section {
-        height: 65rem;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.6rem;
-      }
-  
 
-      .token {
-        height: 40rem;
-        width: 40rem;
-        border: 1rem solid white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: white;
-        border-radius: 1rem;
-        box-shadow: -1rem 2rem 1rem rgb(116, 11, 11);
-      }
-      .token form {
-        padding: 2rem;
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-      }
-      .token form input {
-        padding: 1.3rem;
-        width: 90%;
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <script defer src=" {{url_for('static', filename='scripts/index.js')}}"></script> -->
+  <title>Document</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+      font-family: Helvetica, sans-serif, Arial;
+    }
 
-        font-size: 1.5rem;
-        text-align: center;
-        border-radius: 1rem;
-      }
-      .btn {
-        padding: 1.3rem;
-        margin-top: 1rem;
-        width: 8rem;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        font-size: 1.3rem;
+    .container {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        cursor: pointer;
-        border-radius: 0.5rem;
-        border: none;
-        box-shadow: -0.3rem 1.3rem 1rem rgb(165, 50, 50);
-        font-weight: bold;
-      }
-      .btn:hover {
-        background-color: #870303;
-        color: white;
-      }
-      .generateLink {
-        margin-top: 2rem;
-        font-weight: bold;
-        text-decoration: none;
+    .board {
+      height: 70%;
+      width: 60%;
+      background: white;
+      border: solid 7px #774360;
+      border-radius: 5%;
+      display: flex;
+    }
 
-        color: blue;
-      }
-      .generateLink:hover {
-        color: rgba(20, 20, 173, 0.849);
-        text-decoration: underline;
-      }
-  
-      .token form label {
-        margin-top: 2rem;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: .6rem;
-        color: rgba(90, 88, 88, 0.801);
-      }
-    
-    </style>
-  </head>
-  <body>
-    <section>
-      <div>
+    .division {
+      height: 100%;
+      width: 50%;
+    }
+
+    a{
+      font-style:none;
+      color:white;
+      text-decoration: none;
+    }
+
+    #intro-section {
+      background: #774360;
+      border-radius: 2% 5% 5% 2%;
+      border:white solid 1px;
+      padding: 2%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .img-box {
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    .intro{
+      color:white;
+      padding:3%;
+    }
+
+    h3{
+      margin-bottom:5px;
+      color:rgb(189, 226, 24);
+    }
+
+    #form-control {
+      border-radius: 5%;
+      padding: 1% 2% 3% 2%;
+      box-shadow: 05px 10px -15px 12px rgb(49, 3, 3);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    h2 {
+      position:relative;
+    }
+
+    h2:after{
+      content: "";
+      position: absolute; 
+      left: 50%;
+      bottom: -3px;
+      transform: translateX(-50%);
+      height: 4px;
+      width: 150px;
+      border-radius: 2px;
+      background-color: #774360;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      height: 45%;
+      justify-content: space-between;
+      align-items: center;
+      position:relative;
+    }
+
+    #input {
+      height: 50%;
+      width: auto;
+      padding: 5%;
+    }
+
+    label {
+      margin-top: 2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: .6rem;
+    }
+
+    #token,
+    #userName {
+      width: 100%;
+      border: 2px solid rgba(0, 0, 0, 0);
+      outline: none;
+      background-color: rgba(230, 230, 230, 0.6);
+      padding: 0.5rem .5rem;
+      margin-bottom: 10px;
+      transition: .2s;
+      border: .5px solid #613950;
+    }
+
+    #token:hover, #userName:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    #token:focus, #userName:focus {
+      border: 2px solid #613950;
+      background-color: #fff;
+      padding: 0.5rem .6rem;
+    }
+
+    button {
+      cursor: pointer;
+      font-weight: 700;
+      transition: all .2s;
+      padding: 10px 20px;
+      border-radius: 100px;
+      color:white;
+      background: #774360;
+      border: 1px solid transparent;
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+    }
+
+    button:hover {
+      background: #613950;
+    }
+
+    button>svg {
+      width: 34px;
+      margin-left: 10px;
+      transition: transform .3s ease-in-out;
+    }
+
+    button:hover svg {
+      transform: translateX(5px);
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    #sep{
+      cursor:default;
+    }
+
+    #sep:hover{
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="board">
+      <div id="intro-section" class="division">
+        <div class="img-box">
+            <img src="{{url_for('static', filename='img/chatbot2.png')}}" alt="chatbot">          
+        </div>
+        <div class="intro">
+          <h3 class="greet">Hi there!</h3>
+          <div class="brief">
+            <p>Hi I am Jelly. Please Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, est?</p>
+          </div>
+        </div>
       </div>
-      <div class="token">
+
+      <div id="form-control" class="division">
+        <h2>API Token</h2>
         <form action="/" method="post" enctype="multipart/form-data">
-          <label for="token">Enter your API token here </label>
-          <input
-            type="text"
-            placeholder="For eg:hf_rFDhNdyHYAQEeQFEdsfvMimCYqUSWmmVZ"
-         
-            class="api"
-            name="token"
-            id="token"
-          />
-          <button class="btn" type="submit">submit</button>
+          <div id="input">
+            <label for="token" id="">Enter your API token</label>
+            <input type="text" placeholder="For eg:hf_rFDhNdyHYAQEeQFEdsfvMimCYqUSWmmVZ" class="api" name="token"
+              id="token" />
+            <label for="userName">Enter your Name</label>
+            <input type="text" name="userName" id="userName" placeholder="Enter your Name here">
+          </div>
+          <button type="submit">Submit</button>
         </form>
-        <a
-          class="generateLink"
-          href="https://huggingface.co/docs/api-inference/index"
-          >Generate token--></a
-        >
+
+        <div class="seperator">
+          <!-- <span class="block" id="block1"></span>  -->
+          <p id="sep">OR</p>
+          <!-- <span class="block" id="block2"></span> -->
+        </div>
+        <a href="https://huggingface.co/settings/tokens" target="_blank">
+        <button>
+          <span>Generate Token</span>
+          <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="37" cy="37" r="35.5" stroke="white" stroke-width="3"></circle>
+            <path
+              d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+              fill="white"></path>
+          </svg>
+        </button>
+      </a>
       </div>
-    </section>
-  </body>
+    </div>
+  </div>
+</body>
+
 </html>
