@@ -175,6 +175,9 @@ body {
   position: absolute;
   background-color: #fafafa;
 }
+#searchbar{
+  height:2.5rem;
+}
 
 .innerSearchbar {
   width: 100%;
