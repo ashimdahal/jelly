@@ -1,4 +1,3 @@
-
 @media (hover: hover) {
   .darkredtheme .theme1:hover {
     background-color: darkred;
@@ -10,7 +9,7 @@
   }
 }
 /* This is for the dark theme */
-.darktheme {
+.darktheme .content {
   margin-top: 1.2rem;
   background-color: #625d5d61;
   padding: 0.6rem;
@@ -31,7 +30,7 @@
   padding: 1rem;
 }
 
-.darkchatbox .botMessage{
+.darkchatbox .botMessage {
   line-height: 1.5em;
   word-break: break-word;
   display: inline-block;
@@ -47,7 +46,7 @@
   animation: floatup 0.5s forwards;
 }
 /* This is for the red theme */
-.darkredtheme {
+.darkredtheme .content {
   margin-top: 1.2rem;
   background-color: rgb(190, 19, 19);
   padding: 0.6rem;
@@ -67,4 +66,20 @@
   margin-top: 0.4rem;
   padding: 1rem;
 }
+.darkRedchatbox .botMessage {
+  line-height: 1.5em;
+  word-break: break-word;
+  display: inline-block;
+  background: rgb(84 84 84 / 48%);
+  color: #fafafa;
 
+  padding: 1rem;
+  border-radius: 1rem;
+  border-bottom-left-radius: 1.7rem;
+  max-width: 80%;
+  margin-left: 0.5rem;
+
+  animation: floatup 0.5s forwards;
+}
+
+/* Next theme color : #6edf00 */

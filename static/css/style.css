@@ -175,8 +175,8 @@ body {
   position: absolute;
   background-color: #fafafa;
 }
-#searchbar{
-  height:2.5rem;
+#searchbar {
+  height: 2.5rem;
 }
 
 .innerSearchbar {
@@ -431,20 +431,20 @@ body {
   padding: 0.6rem;
 }
 
-.content {
+.toogletheme .content {
   margin-top: 1.2rem;
   background-color: #edeae661;
   padding: 0.6rem;
 }
 
-.content .theme1 i {
+.toogletheme .content .theme1 i {
   font-size: 2rem;
   margin-right: 1.5rem;
 
   color: rgb(31, 129, 241);
 }
 
-.content .theme1 {
+.toogletheme .content .theme1 {
   user-select: none;
   border-radius: 1.5rem;
   cursor: pointer;
@@ -580,7 +580,7 @@ body {
   .customise:hover {
     transform: scale(0.95);
   }
-  .content .theme1:hover {
+  .toogletheme.content .theme1:hover {
     background-color: rgba(223, 201, 201, 0.89);
     border-radius: 1.5rem;
   }
