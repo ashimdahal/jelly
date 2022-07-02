@@ -45,18 +45,19 @@
                     <div class="bigchatbox">
                     <div id="chatbox" class="chatbox">
                               <!-- Search bar -->
-                  <div class="searchbar" id="searchbar" style="display: none;">
+                              <div id="searchbar" style="display: none;">
+                  <div class="searchbar" id="innerSearchBar"  >
                     <div class="innerSearchbar">
                      
                        <i class="fa fa-search" aria-hidden="true" id="searchFontIcon"></i>
                        <span id="closee">close</span>
-                        <input type="text" class="text-field" id="user-TextInput" placeholder="Search Conversation">
+                        <input type="search" class="text-field" id="user-TextInput" placeholder="Search Conversation">
                         
                         
                         
                      
                     </div>
-                  </div>
+                  </div></div>
                         <h5 id="chat-timestamp"></h5>
                         <p id="botStarterMessage" class="botText search"><img src="{{url_for('static', filename='img/chatbot1.png')}}"><span class="botMessage" >Loading...</span></p>
                         
@@ -130,6 +131,7 @@
           <h3>Jelly</h3>
         </div>
         <hr class="indicator">
+        <div class="toogletheme" id="toogletheme">
             <div class="customise-chat" >
               <div class="customise"id="dropdown1">
               <strong>Customise chat-look</strong>
@@ -141,22 +143,8 @@
               <div class="content" id="dropdown_content1" style="display: none;">
                 <div class="theme1" id="changeThemeButton">
                   <i id="themeicon1" class="fa fa-themeisle" aria-hidden="true"></i>
-                <span class="change-theme">change theme
-                  <!-- <div class="themes">
-                    <span>ram <input type="color" disable ></span>
-                    <span>ram</span>
-                    <span>ram</span>
-                    <span>ram</span>
-
-                  </div> -->
-                </span>
-              </div>
-                <div class="theme1">
-                  <i id="themeicon2" class="fa fa-font" aria-hidden="true"></i>
-                <span>change font-style</span>
-              </div>
-              
-              
+                <span class="change-theme">change theme </span>
+              </div> 
             </div>
             </div>
             
@@ -178,6 +166,7 @@
               </div>
               
             </div>
+          </div>
           </div>
             
     </div>
