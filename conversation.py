@@ -55,13 +55,14 @@ def get_input(text,previous_conversation=None,last_n=5):
     }
     return i
     
-def talk(text,prev_convo):
+def talk(text,prev_convo,token):
     '''
     Make the bot talk based on the given constraints,
     see get_input to understand the given parameters
     '''
     source = 'ne'
     target = 'en'
+    headers = {"Authorization": f"Bearer {token}"}
 
     if 'en' not in asyncio.run(detect_language(text)):
         unicoded_nepali = converter.convert(text)
@@ -71,11 +72,14 @@ def talk(text,prev_convo):
         inp = get_input(text,previous_conversation=prev_convo)
     else:
         inp = get_input(text)
-
-    out = query(inp)
-    generated_nepali = asyncio.run(translate_text(out['generated_text'], 'en', 'ne'))
-    out['generated_text'] = nr.romanize_text(generated_nepali).replace('0','o')\
-        .replace('tapaim','tapai')
+    
+    out = query(inp,headers)
+    try:
+        generated_nepali = asyncio.run(translate_text(out['generated_text'], 'en', 'ne'))
+        out['generated_text'] = nr.romanize_text(generated_nepali).replace('0','o')\
+            .replace('tapaim','tapai')
+    except KeyError:
+        out['generated_text'] = "Incorrect API token/ It expired. <a href ='/removetoken'>RESET API TOKEN</a>"
     return out
 
 def main():
