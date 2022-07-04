@@ -11,17 +11,16 @@ html {
 body {
   font-size: 1.6rem;
 }
-.main-section {
+#main-section {
   overflow: hidden;
   background-color: #fafafa;
+  color: #121212;
 }
 #chatbot {
   display: block;
   grid-template-columns: 3.5fr 1fr;
-  background-color: #fafafa;
   position: relative;
   height: fit-content;
-  color: #121212;
 }
 @keyframes collapse {
   0% {
@@ -46,7 +45,7 @@ body {
   padding: 0.4rem 2rem;
   height: 6rem;
 
-  border-bottom: 0.2rem solid #4c49498f;
+  border-bottom: 0.3rem solid rgba(209, 190, 190, 0.726);
   width: 100%;
 
   display: flex;
@@ -92,38 +91,20 @@ body {
 
 #dark {
   margin-right: 2rem;
-  padding: 0.3rem;
   height: 2.7rem;
   cursor: pointer;
   z-index: 22;
   width: 5rem;
   position: relative;
-  background-color: rgba(22, 21, 21, 0.705);
+  background-color: #121212;
   border-radius: 4rem;
 }
 #darkmode {
   transition: all 0.3s;
   position: relative;
   font-size: 1.8rem;
-  transform: translateX(-0.8rem) translateY(-0.35rem);
-}
-#darkmode #DBM {
-  user-select: none;
-  background-color: rgba(0, 0, 0, 0.685);
-  position: absolute;
-  padding: 1rem;
-  font-size: 1.5rem;
-  z-index: 27;
+  transform: translateX(-0.6rem);
 
-  right: -6rem;
-  top: 3.7rem;
-  padding: 0.4rem;
-  border-radius: 1rem;
-  width: 550%;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  height: 3.6rem;
 }
 
 #collapser #chatemoji2 {
@@ -168,12 +149,10 @@ body {
 
 /* styling the search bar */
 .searchbar {
-  border-bottom: 0.2rem solid #4c49498f;
   z-index: 10;
-
+  background-color: #fafafa;
   width: 100%;
   position: absolute;
-  background-color: #fafafa;
 }
 #searchbar {
   height: 2.5rem;
@@ -247,7 +226,7 @@ body {
   margin-bottom: 0.7rem;
 }
 
-.chatbox .botMessage {
+ .botMessage {
   line-height: 1.5em;
   word-break: break-word;
   display: inline-block;
@@ -323,9 +302,12 @@ body {
   border-radius: 1rem;
   padding: 1rem;
   font-size: 1.6rem;
-  color: #000;
   background-color: #e0e0e0;
   outline: none;
+}
+/* send button */
+ .fa-send{
+  color: #121212;
 }
 
 .chat-bar-input-block {
@@ -346,30 +328,12 @@ body {
   background-color: transparent;
   border: none;
 }
-#chat-icon4,
 #chat-icon5 {
   margin: 0em 0.8rem;
   font-size: 2.3rem;
   position: relative;
   cursor: pointer;
 }
-#chat-icon4 #emoji {
-  color: #fafafa;
-  background-color: rgba(0, 0, 0, 0.685);
-  position: absolute;
-  padding: 1rem;
-  font-size: 1.6rem;
-  bottom: 3.6rem;
-  left: -5rem;
-  padding: 0.4rem;
-  border-radius: 1rem;
-  width: 430%;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  height: 4.2rem;
-}
-
 /* Styling the conversation info */
 .conversational-info {
   display: none;
@@ -431,26 +395,27 @@ body {
   padding: 0.6rem;
 }
 
-.toogletheme .content {
+ .content {
   margin-top: 1.2rem;
-  background-color: #edeae661;
+  background-color: #e1e0e04a;
   padding: 0.6rem;
+  border-radius:.5rem;
 }
 
-.toogletheme .content .theme1 i {
-  font-size: 2rem;
-  margin-right: 1.5rem;
 
-  color: rgb(31, 129, 241);
-}
-
-.toogletheme .content .theme1 {
+.content .theme1 {
   user-select: none;
   border-radius: 1.5rem;
   cursor: pointer;
 
   margin-top: 0.4rem;
   padding: 1rem;
+}
+ .content .theme1 i {
+  font-size: 2rem;
+  margin-right: 1.5rem;
+
+  color: rgb(31, 129, 241);
 }
 
 /* Styling the container of theme */
@@ -478,7 +443,7 @@ body {
   box-shadow: 0 0 0 100vmax #f6f6f694;
 }
 .theme-container {
-  height: 61rem;
+  height: 80vh;
   position: absolute;
   z-index: 44;
   top: 0;
@@ -489,66 +454,82 @@ body {
   margin: auto;
   width: 34.3rem;
   border-radius: 2.5rem;
-  box-shadow: -0.1rem 0.1rem 0.3rem 0.5rem rgba(46, 39, 39, 0.897);
+  border: 1px solid;
 }
 .close-theme {
   padding: 2rem;
   font-size: 2rem;
   text-align: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.555);
+  border-radius: 2.3rem;
 }
 .close-theme i {
   float: right;
   font-size: 2.5rem;
   cursor: pointer;
 }
-.theme-items {
+.inner-theme-items {
   padding: 2.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(6rem, 6rem));
   grid-column-gap: 1.5rem;
   grid-row-gap: 2rem;
+  overflow: auto;
 }
-.theme-items div {
+.inner-theme-items div {
   height: 5.5rem;
   display: inline-block;
+  transition: all 0.3s;
   z-index: 28;
   margin: auto;
   width: 5.5rem;
   border-radius: 100vmax;
   cursor: pointer;
 }
-
-#dark-red-theme {
-  background-color: darkred;
+.inner-theme-items::-webkit-scrollbar {
+  width: 0.8rem;
+}
+.inner-theme-items::-webkit-scrollbar-thumb {
+  background-color: rgb(17, 110, 231);
+  border-radius: 2rem;
+}
+.inner-theme-items::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 2rem;
+}
+#orangeTheme1 {
+  background-color: #fa5b0f;
 }
 #theme-item2 {
-  background-color: rebeccapurple;
+  background-color: #37b182;
 }
 #theme-item3 {
-  background-color: rgb(0, 195, 255);
+  background-color: #1854b4;
 }
 #theme-item4 {
-  background-color: rgb(88, 7, 7);
+  background-color: #606060;
 }
 #theme-item5 {
-  background-color: rgb(37, 131, 14);
-}
-#theme-item6 {
-  background-color: rgb(0, 17, 255);
+  background-color: #260a4d;
 }
 #theme-item7 {
-  background-color: rgb(255, 115, 0);
+  background-color: #8f0e0e;
+}
+#theme-item6 {
+  background-color: #1a2238;
 }
 #theme-item8 {
-  background-color: rgb(119, 0, 255);
+  background-color: #b1810b;
 }
 #theme-item9 {
-  background-color: rgb(255, 0, 200);
+  background:linear-gradient(45deg,  Red, orange, yellow, green, blue, indigo, violet) ;
 }
 #theme-item10 {
-  background-color: rgb(77, 50, 50);
+  background: linear-gradient(to right,  rgb(50, 80, 32), rgb(76, 112, 56), rgb(83,131,57));
 }
+#theme-item11 {
+  background:linear-gradient(45deg,  #852020, #aa3232, #917633);
+}
+
 
 /* hover effects */
 @media (hover: hover) {
@@ -564,12 +545,6 @@ body {
   #closee:hover {
     opacity: 0.7;
   }
-  .theme-items div:hover {
-    box-shadow: 0 0 0 0.6rem rgb(0, 0, 0, 0.2);
-  }
-  #chat-icon4:hover #emoji {
-    display: flex;
-  }
   #chat-icon5:hover {
     color: #257bdd !important;
   }
@@ -580,7 +555,7 @@ body {
   .customise:hover {
     transform: scale(0.95);
   }
-  .toogletheme.content .theme1:hover {
+  .brightTheme .theme1:hover {
     background-color: rgba(223, 201, 201, 0.89);
     border-radius: 1.5rem;
   }
