@@ -28,17 +28,17 @@
     }
 
     .board {
-      height: 70%;
-      width: 60%;
+      height: 450px;
+      width: 700px;
       background: white;
       border: solid 7px #774360;
-      border-radius: 5%;
+      border-radius: 25px;
       display: flex;
     }
 
     .division {
-      height: 100%;
-      width: 50%;
+      height: 435px;
+      width: 350px;
     }
 
     a{
@@ -49,9 +49,9 @@
 
     #intro-section {
       background: #774360;
-      border-radius: 2% 5% 5% 2%;
+      border-radius: 10px 25px 25px 10px;
       border:white solid 1px;
-      padding: 2%;
+      padding: 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -60,7 +60,7 @@
     .img-box {
       height: 150px;
       width: 150px;
-      border-radius: 50%;
+      border-radius: 25px;
       margin-bottom: 15px;
     }
 
@@ -72,7 +72,7 @@
 
     .intro{
       color:white;
-      padding:3%;
+      padding:8px;
     }
 
     h3{
@@ -81,8 +81,8 @@
     }
 
     #form-control {
-      border-radius: 5%;
-      padding: 1% 2% 3% 2%;
+      border-radius: 25px;
+      /* padding: 1% 2% 3% 2%; */
       box-shadow: 05px 10px -15px 12px rgb(49, 3, 3);
       display: flex;
       flex-direction: column;
@@ -106,6 +106,7 @@
       background-color: #774360;
     }
 
+    /* Input Field or Form-Control */
     form {
       display: flex;
       flex-direction: column;
@@ -118,7 +119,7 @@
     #input {
       height: 50%;
       width: auto;
-      padding: 5%;
+      padding: 25px;
     }
 
     label {
@@ -150,6 +151,7 @@
       padding: 0.5rem .6rem;
     }
 
+    /* Buttons */
     button {
       cursor: pointer;
       font-weight: 700;
@@ -189,6 +191,69 @@
     #sep:hover{
       font-weight: bold;
     }
+
+    #generate-token{
+      margin-bottom: 15px;
+    }
+
+
+    /* Responsiveness */
+    @media screen and (max-width: 725px) {
+      .board{
+        height:auto;
+        width:350px;
+        flex-direction: column;
+      }
+
+      .board>input{
+        
+        flex-basis: 10%;
+      }
+
+      #intro-section{
+        height:50%;
+        width:336px;
+        border-radius: 10px 10px 25px 25px;
+
+      }
+      #form-control{
+        height:90%;
+        width:336px;
+      }
+
+      #input{
+        height:45%;
+        padding:15px;
+        margin:5px 0;
+      }
+      
+      #sep{
+        margin:8px auto;
+      }
+
+    }
+
+    @media screen and (max-width: 350px) {
+      .board{
+        border:none;
+      }
+
+      #form-control{
+          height:auto;
+          width: auto;
+          border:none;
+          align-items: space-around;
+      }
+
+      #input{
+        padding:0;
+        margin:18px 0;
+      }
+
+      #intro-section{        
+        display:none;
+      }
+    }
   </style>
 </head>
 
@@ -207,7 +272,7 @@
         </div>
       </div>
 
-      <div id="form-control" class="division">
+      <div id="form-control" class="division form-division">
         <h2>API Token</h2>
         <form action="/" method="post" enctype="multipart/form-data">
           <div id="input">
@@ -225,7 +290,7 @@
           <p id="sep">OR</p>
           <!-- <span class="block" id="block2"></span> -->
         </div>
-        <a href="https://huggingface.co/settings/tokens" target="_blank">
+        <a href="https://huggingface.co/settings/tokens" id="generate-token" target="_blank">
         <button>
           <span>Generate Token</span>
           <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">

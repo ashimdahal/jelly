@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def api():
     # Fetching the cookie 
-    cookie= request.cookies.get('cookieToken');
+    cookie= request.cookies.get('cookieToken')
     if 'cookieToken' in request.cookies:
         return render_template('index.html')
 
