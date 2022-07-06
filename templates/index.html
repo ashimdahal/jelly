@@ -14,8 +14,8 @@
     <title>Chat Bot</title>
   </head>
   <body >
-    <section class="main-section" id="main-section" >
-    <section id="chatbot" >
+    <section class="brightTheme" id="main-section" >
+    <section id="chatbot">
       <div class="flexer" id="flexer">
         <div class="chat-bar-collapsible">
         <div class="chat-navbar-collapsible">
@@ -28,7 +28,6 @@
            
             <div id="dark" style="display: inline-block;">
             <i class="fa fa-circle chaticon" aria-hidden="true" id="darkmode" style="color: white;" >
-              <span id="DBM" style="color: white;">Dark mode</span>
             </i>
           </div>
             <i  class="fa fa-info-circle chaticon" id="collapser" aria-hidden="true"><span id="chatemoji2">conversational info</span></i>
@@ -49,7 +48,7 @@
                   <div class="searchbar" id="innerSearchBar"  >
                     <div class="innerSearchbar">
                      
-                       <i class="fa fa-search" aria-hidden="true" id="searchFontIcon"></i>
+                       <i class="fa fa-search" aria-hidden="true" class="searchFontIcon"></i>
                        <span id="closee">close</span>
                         <input type="search" class="text-field" id="user-TextInput" placeholder="Search Conversation">
                         
@@ -77,12 +76,8 @@
                         </div>
 
                         <div class="chat-bar-icons">
-                         
-                         
-                            <i id="chat-icon4" style="color: #ff0030;" class="fa fa-fw fa-heart"
-                                >  <span id="emoji">choose an emoji</span></i>
                                 <button type="submit">
-                            <i id="chat-icon5" style="color: rgb(34, 33, 33);" class="fa fa-fw fa-send"></i>
+                            <i id="chat-icon5" class="fa fa-fw fa-send"></i>
                             </button>
                         </div>
                     </div>
@@ -106,17 +101,20 @@
                   <i id="closeThemeContainer" class="fa fa-times-circle-o" aria-hidden="true"></i>   
               </div>
               <div class="theme-items">
-                <div id="dark-red-theme"></div>
-                <div id="theme-item2"></div>
-                <div id="theme-item3"></div>
-                <div id="theme-item4"></div>
-                <div id="theme-item5"></div>
-                <div id="theme-item6"></div>
-                <div id="theme-item7"></div>
-                <div id="theme-item8"></div>
-                <div id="theme-item9"></div>
-                <div id="theme-item10"></div>
+                <div class="inner-theme-items">
+                <div id="orangeTheme1" onclick="themeChanger( 'orangeTheme1', '#fa5b0f')"></div>
+                <div id="theme-item2"onclick="themeChanger( 'greenTheme1', '#37b182')"></div>
+                <div id="theme-item3"onclick="themeChanger( 'blueTheme1', '#1854b4')"></div>
+                <div id="theme-item4"onclick="themeChanger( 'greyTheme1', '#606060')"></div>
+                <div id="theme-item5"onclick="themeChanger( 'darkTheme2', '#260a4d')"></div>
+                <div id="theme-item6"onclick="themeChanger( 'redTheme1', '#8f0e0e')"></div>
+                <div id="theme-item7"onclick="themeChanger( 'darkTheme3', '#1a2238')"></div>
+                <div id="theme-item8"onclick="themeChanger( 'goldenTheme1', '#b1810b')"></div>
+                <div id="theme-item9"onclick="themeChanger( 'rainbowTheme1', 'rgb(75 0 131)')"></div>
+                <div id="theme-item10"onclick="themeChanger( 'greenTheme2', 'rgb(67 101 48)')"></div>
+                <div id="theme-item11"onclick="themeChanger( 'girlTheme1', 'rgb(163 71 51)')"></div>
               </div>
+            </div>
               </div> 
             </div>
             </div>
@@ -143,14 +141,14 @@
               <div class="content" id="dropdown_content1" style="display: none;">
                 <div class="theme1" id="changeThemeButton">
                   <i id="themeicon1" class="fa fa-themeisle" aria-hidden="true"></i>
-                <span class="change-theme">change theme </span>
+                <span class="change-theme">Change Theme </span>
               </div> 
             </div>
             </div>
             
             <div class="customise-chat"  >
               <div class="customise" id="dropdown2" >
-              <strong>customise conversation</strong>
+              <strong>Customise Conversation</strong>
               <i id="angle_down2" class="fa fa-angle-down" 
               aria-hidden="true"></i>
               <i style="display:none;" id="angle_up2" class="fa fa-angle-up" aria-hidden="true"></i>
