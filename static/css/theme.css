@@ -7,48 +7,58 @@
     background-color: #121212;
     border-radius: 1.5rem;
   }
-  .orangeTheme1  .theme1:hover{
+  .orangeTheme1 .theme1:hover {
     background-color: #fa5b0f !important;
   }
-  .greenTheme1  .theme1:hover{
+  .greenTheme1 .theme1:hover {
     background-color: #37b182 !important;
   }
-  .blueTheme1  .theme1:hover{
+  .blueTheme1 .theme1:hover {
     background-color: #1854b4 !important;
   }
-  .greenTheme1  .theme1:hover{
+  .greenTheme1 .theme1:hover {
     background-color: #606060 !important;
   }
-  .darkTheme2  .theme1:hover{
+  .darkTheme2 .theme1:hover {
     background-color: #260a4d !important;
   }
-  .redTheme1  .theme1:hover{
+  .redTheme1 .theme1:hover {
     background-color: #8f0e0e !important;
   }
-  .darkTheme3  .theme1:hover{
+  .darkTheme3 .theme1:hover {
     background-color: #1a2238 !important;
   }
-  .goldenTheme1  .theme1:hover{
+  .goldenTheme1 .theme1:hover {
     background-color: #b1810b !important;
   }
-  .rainbowTheme1  .theme1:hover{
-    background:linear-gradient(45deg,  Red,  green, blue, indigo, violet,orange, yellow)  !important;
+  .rainbowTheme1 .theme1:hover {
+    background: linear-gradient(
+      45deg,
+      Red,
+      green,
+      blue,
+      indigo,
+      violet,
+      orange,
+      yellow
+    ) !important;
   }
-  .greenTheme2  .theme1:hover{
-    background:linear-gradient(to right,  rgb(50, 80, 32), rgb(76, 112, 56), rgb(83,131,57)) !important;
+  .greenTheme2 .theme1:hover {
+    background: linear-gradient(
+      to right,
+      rgb(50, 80, 32),
+      rgb(76, 112, 56),
+      rgb(83, 131, 57)
+    ) !important;
   }
-  .girlTheme1  .theme1:hover{
-    background:linear-gradient(45deg,  #852020, #aa3232, #917633) !important;
+  .girlTheme1 .theme1:hover {
+    background: linear-gradient(45deg, #852020, #aa3232, #917633) !important;
   }
-
 }
-
-
-
 
 /* =============== THIS IS FOR THE DARK THEME =========== */
 
-.darkTheme{
+.darkTheme {
   background-color: #121212 !important;
   color: #fafafa !important;
 }
@@ -62,22 +72,19 @@
 }
 
 /* ==== searchbar input css ==== */
-.darkTheme .searchbar 
-{
+.darkTheme .searchbar {
   background-color: #121212 !important;
 }
-.darkTheme .text-field
-{
+.darkTheme .text-field {
   background-color: rgba(84, 84, 84, 0.48) !important;
-  color:#fafafa !important;
+  color: #fafafa !important;
 }
-.darkTheme .searchFontIcon
-{
+.darkTheme .searchFontIcon {
   color: #121212 !important;
 }
 
 /* ===== message send button css ==== */
-.darkTheme .fa-send{
+.darkTheme .fa-send {
   color: #fafafa !important;
 }
 
@@ -94,19 +101,17 @@
 }
 
 /* ===== mode button =====*/
-.darkTheme #dark{
+.darkTheme #dark {
   background-color: #fafafa;
 }
 /* ===== Theme Container Css ===== */
-.darkTheme .close-theme{
-
+.darkTheme .close-theme {
   background-color: #121212 !important;
-
 }
 
 /* =============== THIS IS FOR THE ORANGE THEME =========== */
 
-.orangeTheme1{
+.orangeTheme1 {
   background-color: #fa5b0f !important;
   color: #fafafa !important;
 }
@@ -117,27 +122,24 @@
 }
 
 /* ==== searchbar input css ==== */
-.orangeTheme1 .searchbar 
-{
+.orangeTheme1 .searchbar {
   background-color: #fa5b0f !important;
 }
-.orangeTheme1 .text-field
-{
-  color:#fafafa !important;
+.orangeTheme1 .text-field {
+  color: #fafafa !important;
 }
-.orangeTheme1 .searchFontIcon
-{
+.orangeTheme1 .searchFontIcon {
   color: #fafafa !important;
 }
 
 /* ===== message send button css ==== */
-.orangeTheme1 .fa-send{
+.orangeTheme1 .fa-send {
   color: #fafafa !important;
 }
 
 /* ==== User input css ==== */
 .orangeTheme1 .input-box {
-  color: #fafafa !important;
+  color: #121212 !important;
 }
 
 /* ====== botMessage css ==== */
@@ -146,21 +148,17 @@
 }
 
 /* ===== mode button =====*/
-.orangeTheme1 #dark{
+.orangeTheme1 #dark {
   background-color: #fafafa;
 }
 /* ===== Theme Container Css ===== */
-.orangeTheme1 .close-theme{
-
+.orangeTheme1 .close-theme {
   background-color: #fa5b0f !important;
-
 }
-
-
 
 /* =============== THIS IS FOR THE GREEN THEME =========== */
 
-.greenTheme1{
+.greenTheme1 {
   background-color: #37b182 !important;
   color: #fafafa !important;
 }
@@ -171,27 +169,24 @@
 }
 
 /* ==== searchbar input css ==== */
-.greenTheme1 .searchbar 
-{
+.greenTheme1 .searchbar {
   background-color: #37b182 !important;
 }
-.greenTheme1 .text-field
-{
-  color:#fafafa !important;
+.greenTheme1 .text-field {
+  color: #fafafa !important;
 }
-.greenTheme1 .searchFontIcon
-{
+.greenTheme1 .searchFontIcon {
   color: #fafafa !important;
 }
 
 /* ===== message send button css ==== */
-.greenTheme1 .fa-send{
+.greenTheme1 .fa-send {
   color: #fafafa !important;
 }
 
 /* ==== User input css ==== */
 .greenTheme1 .input-box {
-  color: #fafafa !important;
+  color: #121212 !important;
 }
 
 /* ====== botMessage css ==== */
@@ -200,21 +195,17 @@
 }
 
 /* ===== mode button =====*/
-.greenTheme1 #dark{
+.greenTheme1 #dark {
   background-color: #fafafa;
 }
 /* ===== Theme Container Css ===== */
-.greenTheme1 .close-theme{
-
+.greenTheme1 .close-theme {
   background-color: #37b182 !important;
-
 }
-
-
 
 /* =============== THIS IS FOR THE BLUE THEME =========== */
 
-.blueTheme1{
+.blueTheme1 {
   background-color: #1854b4 !important;
   color: #fafafa !important;
 }
@@ -225,27 +216,24 @@
 }
 
 /* ==== searchbar input css ==== */
-.blueTheme1 .searchbar 
-{
+.blueTheme1 .searchbar {
   background-color: #1854b4 !important;
 }
-.blueTheme1 .text-field
-{
-  color:#fafafa !important;
+.blueTheme1 .text-field {
+  color: #fafafa !important;
 }
-.blueTheme1 .searchFontIcon
-{
+.blueTheme1 .searchFontIcon {
   color: #fafafa !important;
 }
 
 /* ===== message send button css ==== */
-.blueTheme1 .fa-send{
+.blueTheme1 .fa-send {
   color: #fafafa !important;
 }
 
 /* ==== User input css ==== */
 .blueTheme1 .input-box {
-  color: #fafafa !important;
+  color: #121212 !important;
 }
 
 /* ====== botMessage css ==== */
@@ -254,20 +242,17 @@
 }
 
 /* ===== mode button =====*/
-.blueTheme1 #dark{
+.blueTheme1 #dark {
   background-color: #fafafa;
 }
 /* ===== Theme Container Css ===== */
-.blueTheme1 .close-theme{
-
+.blueTheme1 .close-theme {
   background-color: #1854b4 !important;
-
 }
-
 
 /* =============== THIS IS FOR THE GREY THEME =========== */
 
-.greyTheme1{
+.greyTheme1 {
   background-color: #606060 !important;
   color: #fafafa !important;
 }
@@ -278,27 +263,24 @@
 }
 
 /* ==== searchbar input css ==== */
-.greyTheme1 .searchbar 
-{
+.greyTheme1 .searchbar {
   background-color: #606060 !important;
 }
-.greyTheme1 .text-field
-{
-  color:#fafafa !important;
+.greyTheme1 .text-field {
+  color: #fafafa !important;
 }
-.greyTheme1 .searchFontIcon
-{
+.greyTheme1 .searchFontIcon {
   color: #fafafa !important;
 }
 
 /* ===== message send button css ==== */
-.greyTheme1 .fa-send{
+.greyTheme1 .fa-send {
   color: #fafafa !important;
 }
 
 /* ==== User input css ==== */
 .greyTheme1 .input-box {
-  color: #fafafa !important;
+  color: #121212 !important;
 }
 
 /* ====== botMessage css ==== */
@@ -307,20 +289,17 @@
 }
 
 /* ===== mode button =====*/
-.greyTheme1 #dark{
+.greyTheme1 #dark {
   background-color: #fafafa;
 }
 /* ===== Theme Container Css ===== */
-.greyTheme1 .close-theme{
-
+.greyTheme1 .close-theme {
   background-color: #606060 !important;
-
 }
-
 
 /* =============== THIS IS FOR THE DARKTHEME2 THEME =========== */
 
-.darkTheme2{
+.darkTheme2 {
   background-color: #260a4d !important;
   color: #fafafa !important;
 }
@@ -331,27 +310,24 @@
 }
 
 /* ==== searchbar input css ==== */
-.darkTheme2 .searchbar 
-{
+.darkTheme2 .searchbar {
   background-color: #260a4d !important;
 }
-.darkTheme2 .text-field
-{
-  color:#fafafa !important;
+.darkTheme2 .text-field {
+  color: #fafafa !important;
 }
-.darkTheme2 .searchFontIcon
-{
+.darkTheme2 .searchFontIcon {
   color: #fafafa !important;
 }
 
 /* ===== message send button css ==== */
-.darkTheme2 .fa-send{
+.darkTheme2 .fa-send {
   color: #fafafa !important;
 }
 
 /* ==== User input css ==== */
 .darkTheme2 .input-box {
-  color: #fafafa !important;
+  color: #121212 !important;
 }
 
 /* ====== botMessage css ==== */
@@ -360,20 +336,17 @@
 }
 
 /* ===== mode button =====*/
-.darkTheme2 #dark{
+.darkTheme2 #dark {
   background-color: #fafafa;
 }
 /* ===== Theme Container Css ===== */
-.darkTheme2 .close-theme{
-
+.darkTheme2 .close-theme {
   background-color: #260a4d !important;
-
 }
-
 
 /* =============== THIS IS FOR THE RED THEME =========== */
 
-.redTheme1{
+.redTheme1 {
   background-color: #8f0e0e !important;
   color: #fafafa !important;
 }
@@ -384,27 +357,24 @@
 }
 
 /* ==== searchbar input css ==== */
-.redTheme1 .searchbar 
-{
+.redTheme1 .searchbar {
   background-color: #8f0e0e !important;
 }
-.redTheme1 .text-field
-{
-  color:#fafafa !important;
+.redTheme1 .text-field {
+  color: #fafafa !important;
 }
-.redTheme1 .searchFontIcon
-{
+.redTheme1 .searchFontIcon {
   color: #fafafa !important;
 }
 
 /* ===== message send button css ==== */
-.redTheme1 .fa-send{
+.redTheme1 .fa-send {
   color: #fafafa !important;
 }
 
 /* ==== User input css ==== */
 .redTheme1 .input-box {
-  color: #fafafa !important;
+  color: #121212 !important;
 }
 
 /* ====== botMessage css ==== */
@@ -413,20 +383,17 @@
 }
 
 /* ===== mode button =====*/
-.redTheme1 #dark{
+.redTheme1 #dark {
   background-color: #fafafa;
 }
 /* ===== Theme Container Css ===== */
-.redTheme1 .close-theme{
-
+.redTheme1 .close-theme {
   background-color: #8f0e0e !important;
-
 }
-
 
 /* =============== THIS IS FOR THE DARKTHEME3 THEME =========== */
 
-.darkTheme3{
+.darkTheme3 {
   background-color: #1a2238 !important;
   color: #fafafa !important;
 }
@@ -437,27 +404,24 @@
 }
 
 /* ==== searchbar input css ==== */
-.darkTheme3 .searchbar 
-{
+.darkTheme3 .searchbar {
   background-color: #1a2238 !important;
 }
-.darkTheme3 .text-field
-{
-  color:#fafafa !important;
+.darkTheme3 .text-field {
+  color: #fafafa !important;
 }
-.darkTheme3 .searchFontIcon
-{
+.darkTheme3 .searchFontIcon {
   color: #fafafa !important;
 }
 
 /* ===== message send button css ==== */
-.darkTheme3 .fa-send{
+.darkTheme3 .fa-send {
   color: #fafafa !important;
 }
 
 /* ==== User input css ==== */
 .darkTheme3 .input-box {
-  color: #fafafa !important;
+  color: #121212 !important;
 }
 
 /* ====== botMessage css ==== */
@@ -466,20 +430,17 @@
 }
 
 /* ===== mode button =====*/
-.darkTheme3 #dark{
+.darkTheme3 #dark {
   background-color: #fafafa;
 }
 /* ===== Theme Container Css ===== */
-.darkTheme3 .close-theme{
-
+.darkTheme3 .close-theme {
   background-color: #1a2238 !important;
-
 }
-
 
 /* =============== THIS IS FOR THE GOLDEN THEME =========== */
 
-.goldenTheme1{
+.goldenTheme1 {
   background-color: #b1810b !important;
   color: #fafafa !important;
 }
@@ -490,27 +451,24 @@
 }
 
 /* ==== searchbar input css ==== */
-.goldenTheme1 .searchbar 
-{
+.goldenTheme1 .searchbar {
   background-color: #b1810b !important;
 }
-.goldenTheme1 .text-field
-{
-  color:#fafafa !important;
+.goldenTheme1 .text-field {
+  color: #fafafa !important;
 }
-.goldenTheme1 .searchFontIcon
-{
+.goldenTheme1 .searchFontIcon {
   color: #fafafa !important;
 }
 
 /* ===== message send button css ==== */
-.goldenTheme1 .fa-send{
+.goldenTheme1 .fa-send {
   color: #fafafa !important;
 }
 
 /* ==== User input css ==== */
 .goldenTheme1 .input-box {
-  color: #fafafa !important;
+  color: #121212 !important;
 }
 
 /* ====== botMessage css ==== */
@@ -519,21 +477,27 @@
 }
 
 /* ===== mode button =====*/
-.goldenTheme1 #dark{
+.goldenTheme1 #dark {
   background-color: #fafafa;
 }
 /* ===== Theme Container Css ===== */
-.goldenTheme1 .close-theme{
-
+.goldenTheme1 .close-theme {
   background-color: #b1810b !important;
-
 }
-
 
 /* =============== THIS IS FOR THE RAINBOW THEME =========== */
 
-.rainbowTheme1{
- background:linear-gradient(45deg,  Red, orange, yellow, green, blue, indigo, violet) ;
+.rainbowTheme1 {
+  background: linear-gradient(
+    45deg,
+    Red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
   color: #fafafa !important;
 }
 
@@ -543,27 +507,33 @@
 }
 
 /* ==== searchbar input css ==== */
-.rainbowTheme1 .searchbar 
-{
- background:linear-gradient(45deg,  Red, orange, yellow, green, blue, indigo, violet) !important;
+.rainbowTheme1 .searchbar {
+  background: linear-gradient(
+    45deg,
+    Red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  ) !important;
 }
-.rainbowTheme1 .text-field
-{
-  color:#fafafa !important;
+.rainbowTheme1 .text-field {
+  color: #fafafa !important;
 }
-.rainbowTheme1 .searchFontIcon
-{
+.rainbowTheme1 .searchFontIcon {
   color: #fafafa !important;
 }
 
 /* ===== message send button css ==== */
-.rainbowTheme1 .fa-send{
+.rainbowTheme1 .fa-send {
   color: #fafafa !important;
 }
 
 /* ==== User input css ==== */
 .rainbowTheme1 .input-box {
-  color: #fafafa !important;
+  color: #121212 !important;
 }
 
 /* ====== botMessage css ==== */
@@ -572,21 +542,32 @@
 }
 
 /* ===== mode button =====*/
-.rainbowTheme1 #dark{
+.rainbowTheme1 #dark {
   background-color: #fafafa;
 }
 /* ===== Theme Container Css ===== */
-.rainbowTheme1 .close-theme{
-
- background:linear-gradient(45deg,  Red, orange, yellow, green, blue, indigo, violet) ;
-
+.rainbowTheme1 .close-theme {
+  background: linear-gradient(
+    45deg,
+    Red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
 }
-
 
 /* =============== THIS IS FOR THE GREENTHEME2 THEME =========== */
 
-.greenTheme2{
-  background:linear-gradient(to right,  rgb(50, 80, 32), rgb(76, 112, 56), rgb(83,131,57)) !important;
+.greenTheme2 {
+  background: linear-gradient(
+    to right,
+    rgb(50, 80, 32),
+    rgb(76, 112, 56),
+    rgb(83, 131, 57)
+  ) !important;
   color: #fafafa !important;
 }
 
@@ -596,22 +577,24 @@
 }
 
 /* ==== searchbar input css ==== */
-.greenTheme2 .searchbar 
-{
-  background:linear-gradient(to right,  rgb(50, 80, 32), rgb(76, 112, 56), rgb(83,131,57)) !important;
+.greenTheme2 .searchbar {
+  background: linear-gradient(
+    to right,
+    rgb(50, 80, 32),
+    rgb(76, 112, 56),
+    rgb(83, 131, 57)
+  ) !important;
 }
-.greenTheme2 .text-field
-{
-  color:#fafafa !important;
+.greenTheme2 .text-field {
+  color: #fafafa !important;
 }
-.greenTheme2 .searchFontIcon
-{
+.greenTheme2 .searchFontIcon {
   color: #fafafa !important;
 }
 
 /* ===== message send button css ==== */
-.greenTheme2 .fa-send{
-  color: #fafafa !important;
+.greenTheme2 .fa-send {
+  color: #121212 !important;
 }
 
 /* ==== User input css ==== */
@@ -625,21 +608,23 @@
 }
 
 /* ===== mode button =====*/
-.greenTheme2 #dark{
+.greenTheme2 #dark {
   background-color: #fafafa;
 }
 /* ===== Theme Container Css ===== */
-.greenTheme2 .close-theme{
-
-  background:linear-gradient(to right,  rgb(50, 80, 32), rgb(76, 112, 56), rgb(83,131,57)) !important;
-
+.greenTheme2 .close-theme {
+  background: linear-gradient(
+    to right,
+    rgb(50, 80, 32),
+    rgb(76, 112, 56),
+    rgb(83, 131, 57)
+  ) !important;
 }
-
 
 /* =============== THIS IS FOR THE GIRL THEME =========== */
 
-.girlTheme1{
-  background:linear-gradient(45deg,  #852020, #aa3232, #917633) !important;
+.girlTheme1 {
+  background: linear-gradient(45deg, #852020, #aa3232, #917633) !important;
   color: #fafafa !important;
 }
 
@@ -649,27 +634,24 @@
 }
 
 /* ==== searchbar input css ==== */
-.girlTheme1 .searchbar 
-{
-  background:linear-gradient(45deg,  #852020, #aa3232, #917633) !important;
+.girlTheme1 .searchbar {
+  background: linear-gradient(45deg, #852020, #aa3232, #917633) !important;
 }
-.girlTheme1 .text-field
-{
-  color:#fafafa !important;
+.girlTheme1 .text-field {
+  color: #fafafa !important;
 }
-.girlTheme1 .searchFontIcon
-{
+.girlTheme1 .searchFontIcon {
   color: #fafafa !important;
 }
 
 /* ===== message send button css ==== */
-.girlTheme1 .fa-send{
+.girlTheme1 .fa-send {
   color: #fafafa !important;
 }
 
 /* ==== User input css ==== */
 .girlTheme1 .input-box {
-  color: #fafafa !important;
+  color: #121212 !important;
 }
 
 /* ====== botMessage css ==== */
@@ -678,12 +660,10 @@
 }
 
 /* ===== mode button =====*/
-.girlTheme1 #dark{
+.girlTheme1 #dark {
   background-color: #fafafa;
 }
 /* ===== Theme Container Css ===== */
-.girlTheme1 .close-theme{
-
-  background:linear-gradient(45deg,  #852020, #aa3232, #917633) !important;
-
+.girlTheme1 .close-theme {
+  background: linear-gradient(45deg, #852020, #aa3232, #917633) !important;
 }
