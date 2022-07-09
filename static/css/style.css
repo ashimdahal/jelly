@@ -11,6 +11,10 @@ html {
 body {
   font-size: 1.6rem;
 }
+a{
+  text-decoration:none;
+  color:black;
+}
 #main-section {
   overflow: hidden;
   background-color: #fafafa;
@@ -528,6 +532,18 @@ body {
 }
 #theme-item11 {
   background:linear-gradient(45deg,  #852020, #aa3232, #917633);
+}
+
+/* Copyright Documentation */
+.copyright{
+  width:100%;
+  text-decoration: underline;
+  font-weight: bold;
+  display:flex;
+  justify-content: center;
+  position: absolute;
+  bottom:0%;
+  margin: 15px auto;
 }
 
 
