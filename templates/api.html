@@ -43,7 +43,7 @@
 
     a{
       font-style:none;
-      color:white;
+      /* color:white; */
       text-decoration: none;
     }
 
@@ -103,14 +103,14 @@
       height: 4px;
       width: 150px;
       border-radius: 2px;
-      background-color: #774360;
+      background-color: #1A2238;
     }
 
     /* Input Field or Form-Control */
     form {
       display: flex;
       flex-direction: column;
-      height: 45%;
+      height: 50%;
       justify-content: space-between;
       align-items: center;
       position:relative;
@@ -138,7 +138,7 @@
       padding: 0.5rem .5rem;
       margin-bottom: 10px;
       transition: .2s;
-      border: .5px solid #613950;
+      border: .5px solid #1A2238;
     }
 
     #token:hover, #userName:hover {
@@ -146,7 +146,7 @@
     }
 
     #token:focus, #userName:focus {
-      border: 2px solid #613950;
+      border: 2px solid #011550;
       background-color: #fff;
       padding: 0.5rem .6rem;
     }
@@ -159,7 +159,7 @@
       padding: 10px 20px;
       border-radius: 100px;
       color:white;
-      background: #774360;
+      background: #1A2238;
       border: 1px solid transparent;
       display: flex;
       align-items: center;
@@ -167,7 +167,7 @@
     }
 
     button:hover {
-      background: #613950;
+      background: #011550;
     }
 
     button>svg {
@@ -184,6 +184,10 @@
       transform: scale(0.95);
     }
 
+    #btn{
+      padding: 12px 70px;
+    }
+
     #sep{
       cursor:default;
     }
@@ -196,6 +200,18 @@
       margin-bottom: 15px;
     }
 
+    .copyright{
+      width:100%;
+      text-decoration: underline;
+      font-weight: bold;
+      display:flex;
+      justify-content: center;
+      margin: 15px auto;
+    }
+
+    .copyright > a{
+      color:#1A2238;
+    }
 
     /* Responsiveness */
     @media screen and (max-width: 725px) {
@@ -205,20 +221,32 @@
         flex-direction: column;
       }
 
-      .board>input{
-        
+      .board>input{        
         flex-basis: 10%;
+      }
+
+      .img-box {
+        height: 100px;
+        width: 100px;
+        border-radius: 25px;
+        margin-bottom: 15px;
+      }
+
+      img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
       }
 
       #intro-section{
         height:50%;
         width:336px;
         border-radius: 10px 10px 25px 25px;
-
       }
       #form-control{
-        height:90%;
+        height:85%;
         width:336px;
+        margin-top: 10px;
       }
 
       #input{
@@ -253,6 +281,10 @@
       #intro-section{        
         display:none;
       }
+
+      #btn{
+        padding:12px 50px;
+      }
     }
   </style>
 </head>
@@ -262,12 +294,13 @@
     <div class="board">
       <div id="intro-section" class="division">
         <div class="img-box">
-            <img src="{{url_for('static', filename='img/chatbot2.png')}}" alt="chatbot">          
+            <!-- <img src="{{url_for('static', filename='img/chatbot2.png')}}" alt="chatbot">           -->
+            <img src="../static/img/chatbot2.png" alt="chatbot">          
         </div>
         <div class="intro">
           <h3 class="greet">Hi there!</h3>
           <div class="brief">
-            <p>Hi I am Jelly. Please enter your huggingface token or generate one using the generate button.</p>
+            <p>Hi I am Jelly. Please enter your hugging face token or generate one using the generate button.</p>
           </div>
         </div>
       </div>
@@ -282,7 +315,7 @@
             <label for="userName">Enter your Name</label>
             <input type="text" name="userName" id="userName" placeholder="Enter your Name here">
           </div>
-          <button type="submit">Submit</button>
+          <button type="submit" id="btn">Submit</button>
         </form>
 
         <div class="seperator">
@@ -293,7 +326,7 @@
         <a href="https://huggingface.co/settings/tokens" id="generate-token" target="_blank">
         <button>
           <span>Generate Token</span>
-          <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="34" height="26" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="37" cy="37" r="35.5" stroke="white" stroke-width="3"></circle>
             <path
               d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
@@ -301,6 +334,9 @@
           </svg>
         </button>
       </a>
+      <div class="copyright">
+        <a href="../templates/copyright.html" target="_blank">Copyright Documentation</a>
+      </div>
       </div>
     </div>
   </div>
