@@ -14,6 +14,8 @@ flask run
 ```
 
 ## Credits
+I had to squash previous 60+ commits and 7 Pull Requests into single commit to protect privacy on some of our API credentials and Database URLs. This act have blurred the immense amount of contributions from **[Anuj Khadka](https://github.com/Anuj-Khadka)** and **[Parash Bam](https://github.com/Parashbam69)**; show them some love by dropping a follow.
+
 
 The chatbot used in this project is facebook blenderbot, used on huggingface API.
 
