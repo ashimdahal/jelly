@@ -11,9 +11,9 @@ html {
 body {
   font-size: 1.6rem;
 }
-a{
-  text-decoration:none;
-  color:black;
+a {
+  text-decoration: none;
+  color: black;
 }
 #main-section {
   overflow: hidden;
@@ -108,7 +108,6 @@ a{
   position: relative;
   font-size: 1.8rem;
   transform: translateX(-0.6rem);
-
 }
 
 #collapser #chatemoji2 {
@@ -230,7 +229,7 @@ a{
   margin-bottom: 0.7rem;
 }
 
- .botMessage {
+.botMessage {
   line-height: 1.5em;
   word-break: break-word;
   display: inline-block;
@@ -310,7 +309,7 @@ a{
   outline: none;
 }
 /* send button */
- .fa-send{
+.fa-send {
   color: #121212;
 }
 
@@ -344,6 +343,7 @@ a{
   transition: transform 1.4s;
   overflow: auto;
   height: 100vh;
+  position: relative;
 
   width: 100%;
 }
@@ -399,13 +399,12 @@ a{
   padding: 0.6rem;
 }
 
- .content {
+.content {
   margin-top: 1.2rem;
   background-color: #e1e0e04a;
   padding: 0.6rem;
-  border-radius:.5rem;
+  border-radius: 0.5rem;
 }
-
 
 .content .theme1 {
   user-select: none;
@@ -415,7 +414,7 @@ a{
   margin-top: 0.4rem;
   padding: 1rem;
 }
- .content .theme1 i {
+.content .theme1 i {
   font-size: 2rem;
   margin-right: 1.5rem;
 
@@ -525,27 +524,47 @@ a{
   background-color: #b1810b;
 }
 #theme-item9 {
-  background:linear-gradient(45deg,  Red, orange, yellow, green, blue, indigo, violet) ;
+  background: linear-gradient(
+    45deg,
+    Red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
 }
 #theme-item10 {
-  background: linear-gradient(to right,  rgb(50, 80, 32), rgb(76, 112, 56), rgb(83,131,57));
+  background: linear-gradient(
+    to right,
+    rgb(50, 80, 32),
+    rgb(76, 112, 56),
+    rgb(83, 131, 57)
+  );
 }
 #theme-item11 {
-  background:linear-gradient(45deg,  #852020, #aa3232, #917633);
+  background: linear-gradient(45deg, #852020, #aa3232, #917633);
 }
 
 /* Copyright Documentation */
-.copyright{
-  width:100%;
-  text-decoration: underline;
-  font-weight: bold;
-  display:flex;
-  justify-content: center;
+.copyright {
+  bottom: 0;
   position: absolute;
-  bottom:0%;
-  margin: 15px auto;
+  width: 100%;
+  display: flex;
+  margin: auto;
+  padding:.4rem;
+  justify-content: center;
+  background-color: white;
 }
+.copyright a{
+  color: blue !important;
 
+}
+.copyright a:hover{
+  text-decoration: underline;
+}
 
 /* hover effects */
 @media (hover: hover) {
