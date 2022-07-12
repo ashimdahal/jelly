@@ -112,6 +112,7 @@ def remove():
     resp.set_cookie('weekCookie', expires=0)
     resp.set_cookie('monthCookie', expires=0)
     return resp
+    
 @app.route('/copyright')
 def copyright():
    return render_template('copyright.html')
