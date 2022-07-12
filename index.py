@@ -8,9 +8,9 @@ app = Flask(__name__)
 db = SQLAlchemy(app)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-USER_METRICS = False
+USER_METRICS = True
 if USER_METRICS:
-    app.config['SQLALCHEMY_DATABASE_URI']= 'hehe vandina'
+    app.config['SQLALCHEMY_DATABASE_URI']= 'postgresql://xahwfrorjlrcnn:f9da5fbcb2b3146ddef24e1f4263152beb4732f757c6743ead949237544e8c02@ec2-52-20-166-21.compute-1.amazonaws.com:5432/dctfl6qp4tki9e'
 
     class Users(db.Model):
         sno = db.Column(db.Integer, nullable=True, primary_key=True)
