@@ -5,4 +5,5 @@ nepali-unicode-converter
 nepali-roman
 gunicorn
 Flask-SQLAlchemy
-mysql-python
+psycopg2
+mysqlclient

@@ -7,48 +7,68 @@ import datetime
 app = Flask(__name__)
 db = SQLAlchemy(app)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-username = 'parash'
-password ='(Parashbam16)'
-app.config['SQLALCHEMY_DATABASE_URI']= f'mysql://{username}:{password}@localhost/jelly'
 
-class Users(db.Model):
-    sno = db.Column(db.Integer, nullable=True, primary_key=True)
-    newUsers = db.Column(db.Integer, nullable=True)
-    dailyUsers = db.Column(db.Integer, nullable=True)
-    weeklyUsers = db.Column(db.Integer,  nullable=True)
-    monthlyUsers = db.Column(db.Integer,  nullable=True)
+USER_METRICS = False
+if USER_METRICS:
+    app.config['SQLALCHEMY_DATABASE_URI']= 'hehe vandina'
+
+    class Users(db.Model):
+        sno = db.Column(db.Integer, nullable=True, primary_key=True)
+        newUsers = db.Column(db.Integer, nullable=True)
+        dailyUsers = db.Column(db.Integer, nullable=True)
+        weeklyUsers = db.Column(db.Integer,  nullable=True)
+        monthlyUsers = db.Column(db.Integer,  nullable=True)
 
 
 @app.route('/', methods=['GET', 'POST'])
 def api():
 
     if 'cookieToken' in request.cookies:
-         # Fetching the cookie 
-        cookie= request.cookies.get('cookieToken')
-        # fetching data from database
-        User =  Users.query.filter_by(sno=1).first()
-        if 'dayCookie' in request.cookies:
-            day=User.dailyUsers+1
-            User.dailyUsers=day
-            db.session.commit()
-        elif 'weekCookie' in request.cookies:
-            week=User.weeklyUsers+1
-            User.weeklyUsers=week
-            db.session.commit()
-        elif 'monthCookie' in request.cookies:
-            month=User.monthlyUsers+1
-            User.monthlyUsers=month
-            db.session.commit()
-        else:
-            # setting the cookie for new monthly user
-            cookieToken = make_response()
-            cookieToken.set_cookie('dayCookie', f'{cookie}' , expires=datetime.datetime.now() + datetime.timedelta(days=1))
-            cookieToken.set_cookie('weekCookie', f'{cookie}' , expires=datetime.datetime.now() + datetime.timedelta(days=7))
-            cookieToken.set_cookie('monthCookie', f'{cookie}' , expires=datetime.datetime.now() + datetime.timedelta(days=30))
-            new=User.newUsers+1
-            User.newUsers=new
-            db.session.commit()
-            return cookieToken
+        if USER_METRICS:
+            # Fetching the cookie 
+            cookie= request.cookies.get('cookieToken')
+            # fetching data from database
+            User =  Users.query.filter_by(sno=1).first()
+            if 'dayCookie' in request.cookies:
+                day=User.dailyUsers+1
+                User.dailyUsers=day
+                week=User.weeklyUsers+1
+                User.weeklyUsers=week
+                month=User.monthlyUsers+1
+                User.monthlyUsers=month
+                db.session.commit()
+            elif 'weekCookie' in request.cookies:
+                day=User.dailyUsers+1
+                User.dailyUsers=day
+                week=User.weeklyUsers+1
+                User.weeklyUsers=week
+                month=User.monthlyUsers+1
+                User.monthlyUsers=month
+                db.session.commit()
+            elif 'monthCookie' in request.cookies:
+                day=User.dailyUsers+1
+                User.dailyUsers=day
+                week=User.weeklyUsers+1
+                User.weeklyUsers=week
+                month=User.monthlyUsers+1
+                User.monthlyUsers=month
+                db.session.commit()
+            else:
+                # setting the cookie for new monthly user
+                cookieToken = make_response(render_template('index.html'))
+                cookieToken.set_cookie('dayCookie', f'{cookie}' , expires=datetime.datetime.now() + datetime.timedelta(days=1))
+                cookieToken.set_cookie('weekCookie', f'{cookie}' , expires=datetime.datetime.now() + datetime.timedelta(days=7))
+                cookieToken.set_cookie('monthCookie', f'{cookie}' , expires=datetime.datetime.now() + datetime.timedelta(days=30))
+                new=User.newUsers+1
+                User.newUsers=new
+                day=User.dailyUsers+1
+                User.dailyUsers=day
+                week=User.weeklyUsers+1
+                User.weeklyUsers=week
+                month=User.monthlyUsers+1
+                User.monthlyUsers=month
+                db.session.commit()
+                return cookieToken
         return render_template('index.html')
 
     if request.method == 'POST':
@@ -58,6 +78,20 @@ def api():
         expire_date= datetime.datetime.now() + datetime.timedelta(days=365)
         cookieToken = make_response(render_template('index.html'))
         cookieToken.set_cookie('cookieToken', f'{token}', expires=expire_date)
+        if USER_METRICS:
+            User =  Users.query.filter_by(sno=1).first()
+            cookieToken.set_cookie('dayCookie', f'{token}' , expires=datetime.datetime.now() + datetime.timedelta(days=1))
+            cookieToken.set_cookie('weekCookie', f'{token}' , expires=datetime.datetime.now() + datetime.timedelta(days=7))
+            cookieToken.set_cookie('monthCookie', f'{token}' , expires=datetime.datetime.now() + datetime.timedelta(days=30))
+            new=User.newUsers+1
+            User.newUsers=new
+            day=User.dailyUsers+1
+            User.dailyUsers=day
+            week=User.weeklyUsers+1
+            User.weeklyUsers=week
+            month=User.monthlyUsers+1
+            User.monthlyUsers=month
+            db.session.commit()
         return cookieToken       
     return render_template('api.html')
 
@@ -81,6 +115,7 @@ def remove():
     resp.set_cookie('weekCookie', expires=0)
     resp.set_cookie('monthCookie', expires=0)
     return resp
+
 @app.route('/copyright')
 def copyright():
    return render_template('copyright.html')
