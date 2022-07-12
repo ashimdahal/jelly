@@ -67,7 +67,6 @@ def api():
 def response():
     from conversation import talk
     token = request.cookies.get('cookieToken')
-    pring(token)
     user_inp = request.get_json()
     text = user_inp['text']
     prev_conv = user_inp['previous_conversaion']
@@ -82,6 +81,9 @@ def remove():
     resp.set_cookie('weekCookie', expires=0)
     resp.set_cookie('monthCookie', expires=0)
     return resp
+@app.route('/copyright')
+def copyright():
+   return render_template('copyright.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
