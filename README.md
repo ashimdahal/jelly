@@ -1,5 +1,9 @@
 # Jelly
 A chatbot that replies to romanized Nepali that is production ready. Start by cloning and installing the required libraries.
+![Alt text](static/img/demo.png?raw=true "Jelly In action")
+Try out the [Heroku App](https://jellysathi.herokuapp.com).
+
+#OR Use it locally on your machine
 
     git clone https://github.com/ashimdahal/jelly.git
 	pip install -r requirements.txt     
