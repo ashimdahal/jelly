@@ -75,6 +75,7 @@ def api():
     if request.method == 'POST':
         # seting the cookie
         token = request.form.get('token')
+
         # main cookie
         expire_date= datetime.datetime.now() + datetime.timedelta(days=365)
         cookieToken = make_response(render_template('index.html'))
