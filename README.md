@@ -1,5 +1,10 @@
 # Jelly
-A chatbot that replies to romanized Nepali that is production ready. Start by cloning and installing the required libraries.
+A chatbot that replies to romanized Nepali that is in production. 
+![Alt text](static/img/demo.png?raw=true "Jelly In action")
+Try Jelly [here online!](https://jellysathi.herokuapp.com).
+
+#OR Use it locally on your machine
+Start by cloning and installing the required libraries.
 
     git clone https://github.com/ashimdahal/jelly.git
 	pip install -r requirements.txt     
@@ -14,7 +19,7 @@ flask run
 ```
 
 ## Credits
-I had to squash previous 60+ commits and 7 Pull Requests into single commit to protect privacy on some of our API credentials and Database URLs. This act have blurred the immense amount of contributions from **[Anuj Khadka](https://github.com/Anuj-Khadka)** and **[Parash Bam](https://github.com/Parashbam69)**; show them some love by dropping a follow.
+I had to squash previous 60+ commits and 7 Pull Requests into single commit to protect privacy on some of our API credentials and Database URLs. This act have blurred the immense amount of contributions from **[Anuj Khadka](https://github.com/Anuj-Khadka)** and **[Parash Bam](https://github.com/Parashbam69)**; show them some love by dropping a follow; while you're on it, drop one for me as well **[Ashim Dahal.](https://github.com/ashimdahal)**
 
 
 The chatbot used in this project is facebook blenderbot, used on huggingface API.
