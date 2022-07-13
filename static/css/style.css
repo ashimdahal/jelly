@@ -556,6 +556,10 @@ a {
   margin: auto;
   padding:.4rem;
   justify-content: center;
+<<<<<<< HEAD
+=======
+  background-color: white;
+>>>>>>> 83d8421aee0f75069840d1f51dbd5e5e55aba7bc
 }
 .copyright a{
   color: blue !important;
