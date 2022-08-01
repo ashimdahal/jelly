@@ -10,7 +10,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 USER_METRICS = True
 if USER_METRICS:
-    app.config['SQLALCHEMY_DATABASE_URI']= "postgres://lmplraoaopfjik:f5646a3cb32a8e8a64424eca55b0b3013206851a4e00b92f162d65bbac835a98@ec2-54-85-56-210.compute-1.amazonaws.com:5432/d8cg969jasbkcr"
+    app.config['SQLALCHEMY_DATABASE_URI']= "postgresql://lmplraoaopfjik:f5646a3cb32a8e8a64424eca55b0b3013206851a4e00b92f162d65bbac835a98@ec2-54-85-56-210.compute-1.amazonaws.com:5432/d8cg969jasbkcr"
 
     class Users(db.Model):
         sno = db.Column(db.Integer, nullable=True, primary_key=True)
