@@ -6,3 +6,5 @@ nepali-roman
 Flask-SQLAlchemy
 psycopg2
 mysqlclient
+uwsgi
+werkzeug
