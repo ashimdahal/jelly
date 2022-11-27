@@ -6,4 +6,4 @@ nepali-roman
 Flask-SQLAlchemy
 psycopg2
 mysqlclient
-uvicorn
+gunicorn
