@@ -1,7 +1,7 @@
 # Jelly
 A chatbot that replies to romanized Nepali that is in production. 
 ![Alt text](static/img/demo.png?raw=true "Jelly In action")
-Try Jelly [here online!](https://jellysathi.herokuapp.com).
+Try Jelly [here online!](https://jelly.thetwl.org).
 
 #OR Use it locally on your machine
 Start by cloning and installing the required libraries.
