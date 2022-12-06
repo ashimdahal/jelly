@@ -63,7 +63,7 @@ class Translator(Exception):
 
 class google_translator:
  
-    def __init__(self, url_suffix="com", timeout=5, proxies=None):
+    def __init__(self, url_suffix="com.np", timeout=10, proxies=None):
         self.proxies = proxies
         if url_suffix not in URLS_SUFFIX:
             self.url_suffix = URL_SUFFIX_DEFAULT
