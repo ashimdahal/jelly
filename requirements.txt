@@ -4,6 +4,3 @@ google-cloud-translate
 nepali-unicode-converter
 nepali-roman
 Flask-SQLAlchemy
-psycopg2
-mysqlclient
-gunicorn
