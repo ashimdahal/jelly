@@ -120,7 +120,7 @@ DEFAULT_SERVICE_URLS = ('translate.google.ac','translate.google.ad','translate.g
                         'translate.google.cat','translate.google.cc','translate.google.cd',
                         'translate.google.cf','translate.google.cg','translate.google.ch',
                         'translate.google.ci','translate.google.cl','translate.google.cm',
-                        'translate.google.cn','translate.google.co.ao','translate.google.co.bw',
+                       'translate.google.co.ao','translate.google.co.bw',
                         'translate.google.co.ck','translate.google.co.cr','translate.google.co.id',
                         'translate.google.co.il','translate.google.co.in','translate.google.co.jp',
                         'translate.google.co.ke','translate.google.co.kr','translate.google.co.ls',
