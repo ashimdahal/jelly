@@ -3,6 +3,9 @@ A chatbot that replies to romanized Nepali that is in production.
 ![Alt text](static/img/demo.png?raw=true "Jelly In action")
 Try Jelly [here online!](https://jelly.thetwl.org).
 
+Read research about jelly [here!](https://doi.org/10.21203/rs.3.rs-2183870/v2).
+
+
 #OR Use it locally on your machine
 Start by cloning and installing the required libraries.
 
