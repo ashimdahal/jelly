@@ -18,7 +18,7 @@ git clone https://github.com/ashimdahal/jelly.git
 pip install -r requirements.txt
 ```
 
-Next, create an account on huggingface and obtain an API key by going to the tokens settings. You will be asked to enter the API key when you run the app.
+Next, create an account on huggingface and obtain an API KEY by going to the [tokens settings](https://huggingface.co/settings/tokens). You will be asked to enter the API key when you run the app.
 
 To run the app using Flask, set the environment variable and run the Flask app:
 
