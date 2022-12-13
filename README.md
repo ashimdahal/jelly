@@ -27,6 +27,12 @@ export FLASK_APP=index
 flask run
 ```
 
+Or Just run with python
+
+```
+python app.py
+```
+
 ---
 
 ## Credits
