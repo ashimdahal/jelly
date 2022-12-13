@@ -14,11 +14,12 @@ Jelly is a chatbot that uses natural language processing to understand and reply
 To use Jelly locally on your machine, start by cloning the repository and installing the required libraries:
 
 ```
-git clone https://github.com/ashimdahal/jelly.git
+git clone https://github.com/ashimdahal/jelly.git 
+cd jelly/
 pip install -r requirements.txt
 ```
 
-Next, create an account on huggingface and obtain an API KEY by going to the [tokens settings](https://huggingface.co/settings/tokens). You will be asked to enter the API key when you run the app.
+Next, [OPTIONAL] create an account on huggingface and obtain an API KEY by going to the [tokens settings](https://huggingface.co/settings/tokens). You will be asked to enter the API key when you run the app but can enter anything to run the app temporarily.
 
 To run the app using Flask, set the environment variable and run the Flask app:
 
@@ -27,7 +28,7 @@ export FLASK_APP=index
 flask run
 ```
 
-Or Just run with python
+Or Just run it the following way:
 
 ```
 python app.py
