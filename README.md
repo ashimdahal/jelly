@@ -1,6 +1,6 @@
 # Jelly
 
-Jelly is a chatbot that replies to romanized Nepali. The chatbot is currently in production and can be used online or locally on your own machine.
+Jelly is the one and only chatbot in existence that replies to romanized Nepali. The chatbot is currently in production and can be used online or locally on your own machine.
 
 ![Alt text](static/img/demo.png?raw=true "Jelly In action")
 
