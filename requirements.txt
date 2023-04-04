@@ -3,4 +3,4 @@ Werkzeug==2.1.2
 google-cloud-translate
 nepali-unicode-converter
 nepali-roman
-Flask-SQLAlchemy
+Flask-SQLAlchemy==1.4
