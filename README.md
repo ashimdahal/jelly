@@ -4,7 +4,7 @@ Jelly is the one and only chatbot in existence that replies to romanized Nepali.
 
 ![Alt text](static/img/demo.png?raw=true "Jelly In action")
 
-- Try Jelly demo from [here online](https://jelly.thetwl.org/)
+- Try Jelly demo from --- Jelly has been discontinued because of advents of ChatGPT. You can still try by compiling it and read our research paper.
 
 - Read the research about jelly from [here](https://www.researchsquare.com/article/rs-2183870/v2)
 
